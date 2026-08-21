@@ -31,6 +31,11 @@ bundle exec jekyll serve
 If you hit `Invalid US-ASCII character` from Sass, your shell's locale isn't
 UTF-8 — run with `LANG=C.utf8 LC_ALL=C.utf8 bundle exec jekyll serve` instead.
 
+Always go through `http://localhost:4000`, never open `_site/index.html`
+directly from disk. The theme links its CSS as `/assets/css/main.css` (root-
+relative), which only resolves when served over HTTP — opened as a `file://`
+URL it 404s silently and the page renders as unstyled HTML.
+
 ## Update the publication list
 
 Either edit `_data/publications.json` by hand, or pull the current state

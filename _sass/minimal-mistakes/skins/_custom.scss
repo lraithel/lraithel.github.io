@@ -19,6 +19,13 @@ $masthead-link-color:         $text-color !default;
 $masthead-link-color-hover:   $primary-color !default;
 $navicon-link-color-hover:    mix(#000, $background-color, 8%) !default;
 
+/* Layout */
+// Theme default is 1280px, which left a lot of empty margin on wide
+// screens and made the content column (page width minus the fixed-width
+// sidebar) feel narrow. The sidebar stays a fixed 200-300px, so nearly
+// all of this extra width goes to the content column.
+$max-width: 1500px !default;
+
 // Dark-mode overrides for this skin live in _custom-site.scss, not here:
 // that partial is imported after the theme's own component styles, so its
 // rules win the cascade tie against the theme's unconditional (compile-time)
