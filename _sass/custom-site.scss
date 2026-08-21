@@ -85,24 +85,59 @@ h1 .ent { margin-inline: 0.05em; }
   margin-top: -0.5rem;
 }
 
+.pub-year-group {
+  border-bottom: 1px solid $border-color;
+
+  &:last-of-type { border-bottom: none; }
+}
+
 .pub-year {
+  // <summary> comes with its own disclosure triangle in most browsers;
+  // replace it with a +/- so it reads clearly against the burgundy color
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
   font-family: $monospace;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   letter-spacing: 0.08em;
   color: $primary-color;
-  border-bottom: 1px solid $border-color;
-  padding-bottom: 0.3rem;
-  margin: 2rem 0 0.75rem;
+  padding: 0.9rem 0;
+  -webkit-tap-highlight-color: transparent;
+
+  &::-webkit-details-marker { display: none; }
+
+  &::before {
+    content: "+";
+    display: inline-block;
+    width: 1em;
+  }
+
+  &:hover { color: $link-color-hover; }
+}
+
+details[open] > .pub-year::before { content: "\2212"; } // minus sign
+
+.pub-count {
+  font-family: $global-font-family;
+  font-size: 0.8rem;
+  letter-spacing: normal;
+  color: $muted-text-color;
+}
+
+.pub-year-body {
+  padding-bottom: 0.5rem;
 }
 
 .pub {
   padding: 0.7rem 0;
-  border-bottom: 1px solid $border-color;
+  border-top: 1px solid $border-color;
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
 
-  &:last-child { border-bottom: none; }
+  &:first-child { border-top: none; }
 }
 
 .pub-title {
@@ -223,8 +258,12 @@ h1 .ent { margin-inline: 0.05em; }
     border-color: #3a2530;
   }
 
-  .pub, .plain li { border-bottom-color: #3a2530; }
-  .pub-year { border-bottom-color: #3a2530; color: #e893b3; }
+  .pub-year-group { border-bottom-color: #3a2530; }
+  .pub { border-top-color: #3a2530; }
+  .plain li { border-bottom-color: #3a2530; }
+  .pub-year { color: #e893b3; }
+  .pub-year:hover { color: #f3b2cb; }
+  .pub-count { color: #b9a6ad; }
   .pub-title { color: #ede3e7; }
   .pub-authors, .pub-venue, .hero-lede, .themes article p { color: #b9a6ad; }
   .pub-authors .me { color: #ede3e7; }

@@ -80,15 +80,19 @@ author_profile: true
 {% assign highlight = site.data.publications.highlight %}
 {% assign year_groups = entries | group_by: "year" | sort: "name" | reverse %}
 {% for grp in year_groups %}
-<h3 class="pub-year">{{ grp.name }}</h3>
-{% for p in grp.items %}
-<div class="pub">
-  <span class="pub-title">{{ p.title }}{% if p.kind %}<span class="kind">{{ p.kind }}</span>{% endif %}</span>
-  <span class="pub-authors">{% for a in p.authors %}{% if a == highlight %}<span class="me">{{ a }}</span>{% else %}{{ a }}{% endif %}{% unless forloop.last %}{% if forloop.rindex == 2 %} and {% else %}, {% endif %}{% endunless %}{% endfor %}</span>
-  <span class="pub-venue"><em>{{ p.venue }}</em></span>
-  {% if p.links.size > 0 %}<span class="pub-links">{% for l in p.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</span>{% endif %}
-</div>
-{% endfor %}
+<details class="pub-year-group"{% if forloop.first %} open{% endif %}>
+  <summary class="pub-year">{{ grp.name }} <span class="pub-count">({{ grp.items.size }})</span></summary>
+  <div class="pub-year-body">
+  {% for p in grp.items %}
+  <div class="pub">
+    <span class="pub-title">{{ p.title }}{% if p.kind %}<span class="kind">{{ p.kind }}</span>{% endif %}</span>
+    <span class="pub-authors">{% for a in p.authors %}{% if a == highlight %}<span class="me">{{ a }}</span>{% else %}{{ a }}{% endif %}{% unless forloop.last %}{% if forloop.rindex == 2 %} and {% else %}, {% endif %}{% endunless %}{% endfor %}</span>
+    <span class="pub-venue"><em>{{ p.venue }}</em></span>
+    {% if p.links.size > 0 %}<span class="pub-links">{% for l in p.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</span>{% endif %}
+  </div>
+  {% endfor %}
+  </div>
+</details>
 {% endfor %}
 
 </section>
@@ -113,7 +117,7 @@ like your kind of problem, write to me.
   </li>
   <li>
     <span class="tag">2026</span>
-    Co-organiser together with Charlott Jakob, Workshop for <a href="https://lp4g.dfki.de/">"LLMs and Language Processing for Social Good"
+    Co-organiser, with Charlott Jakob, of the workshop <a href="https://lp4g.dfki.de/">"LLMs and Language Processing for Social Good"</a>.
   </li>
   <li>
     <span class="tag">2024, 2025, 2026</span>
