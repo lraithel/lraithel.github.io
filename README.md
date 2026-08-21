@@ -13,7 +13,8 @@ _data/publications.json     the publication list (edit this)
 _sass/minimal-mistakes/skins/_custom.scss   the burgundy color palette
 _sass/custom-site.scss      hero entity spans, research grid, publication list styling, dark mode
 assets/css/main.scss        wires the two files above into the theme's build
-tools/dblp_to_json.py       regenerates _data/publications.json from DBLP
+tools/update_publications.py  merges new/updated publications from Semantic Scholar (runs weekly, see below)
+tools/dblp_to_json.py       manual, full-regenerate DBLP import - not part of the automated pipeline
 cv.pdf                      add your own
 ```
 
@@ -38,14 +39,33 @@ URL it 404s silently and the page renders as unstyled HTML.
 
 ## Update the publication list
 
-Either edit `_data/publications.json` by hand, or pull the current state
-from DBLP:
+A scheduled GitHub Action (`.github/workflows/update-publications.yml`)
+runs every Monday - and can be run on demand from the Actions tab
+("Update publications" → "Run workflow") - to fetch from
+[Semantic Scholar](https://www.semanticscholar.org/), merge in anything new,
+and open a PR if there's a diff. It only adds new entries or fills in a
+real venue for an entry that's currently listed as a bare arXiv preprint;
+it never deletes anything, so entries Semantic Scholar doesn't index (the
+PhD thesis, Zenodo datasets, CEUR workshop notes) are left alone. Review
+the PR like any other before merging.
+
+Why not Google Scholar: it has no API and blocks automated requests from
+datacenter IPs almost immediately, GitHub Actions runners included -
+scraping it isn't something that can run unattended.
+
+To run it yourself:
 
 ```bash
-python3 tools/dblp_to_json.py
+python3 tools/update_publications.py --dry-run   # preview, writes nothing
+python3 tools/update_publications.py             # writes _data/publications.json
 ```
 
-The script drops arXiv entries when the same paper also has a venue entry.
-Pass `--keep-preprints` to keep both. It uses the standard library only.
+`_data/publications.json` can also just be edited by hand at any time.
 Jekyll picks up `_data/*.json` automatically — no separate build step.
+
+`tools/dblp_to_json.py` still exists as a separate, manual tool, but DBLP's
+coverage of recent workshop/shared-task papers has lagged, so it's no
+longer part of the automated pipeline. It also *fully regenerates* the
+file rather than merging, so running it will discard anything the workflow
+above or hand-editing has added that DBLP doesn't know about.
 
