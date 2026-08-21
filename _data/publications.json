@@ -1,5 +1,5 @@
 {
-  "_comment": "Edit this file to update the publication list. Author names matching 'highlight' are bolded. Regenerate from DBLP with tools/dblp_to_json.py. Entries below were taken from DBLP pid 163/3199 and should be checked before publishing.",
+  "_comment": "Edit this file to update the publication list, or let it happen automatically. Author names matching 'highlight' are bolded. A weekly GitHub Action runs tools/update_publications.py (Semantic Scholar) and opens a PR with any new or upgraded entries - it never deletes anything. tools/dblp_to_json.py is a separate, manual, full-regenerate tool; running it overwrites this file.",
   "highlight": "Lisa Raithel",
   "entries": [
     {

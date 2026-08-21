@@ -1,0 +1,54 @@
+name: Update publications
+
+on:
+  schedule:
+    # Every Monday at 06:00 UTC. Publications don't change often enough to
+    # justify running this on every push - most pushes are wording tweaks,
+    # not new papers.
+    - cron: "0 6 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Fetch and merge publications from Semantic Scholar
+        run: python3 tools/update_publications.py
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet -- _data/publications.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open a pull request
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          branch="auto/publications-$(date -u +%Y%m%d-%H%M%S)"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add _data/publications.json
+          git commit -m "Update publications from Semantic Scholar"
+          git push origin "$branch"
+          body="Automated update from the scheduled publications-fetch workflow ($(date -u +%Y-%m-%d)). This only adds new entries or fills in a real venue for an existing arXiv-only entry - it never deletes anything. Please sanity-check titles, authors, and venues before merging; Semantic Scholar's data isn't always perfectly formatted."
+          gh pr create \
+            --title "Update publications from Semantic Scholar" \
+            --base main --head "$branch" \
+            --body "$body"

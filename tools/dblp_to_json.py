@@ -2,6 +2,14 @@
 """
 Regenerate _data/publications.json from a DBLP author page.
 
+NOT part of the automated pipeline: .github/workflows/update-publications.yml
+runs tools/update_publications.py (Semantic Scholar) instead, since DBLP's
+coverage of recent workshop/shared-task papers has lagged. This script
+FULLY OVERWRITES _data/publications.json - running it will discard any
+entries update_publications.py or hand-editing has added that DBLP doesn't
+know about (the PhD thesis, datasets, CEUR workshop notes, ...). Only run
+it deliberately, e.g. to sanity-check DBLP's view of the record.
+
 Usage
 -----
     python3 tools/dblp_to_json.py                    # writes _data/publications.json
