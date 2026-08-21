@@ -13,9 +13,10 @@ author_profile: true
     I did my PhD jointly at TU Berlin and Université Paris-Saclay on cross-lingual
     information extraction for pharmacovigilance. <br>
     My work now focuses on robustness of language-based systems in the clinical/biomedical domain,
-    anonymization techniques for clinical texts or texts written by patients and NLP-support for mental health.
+    anonymization techniques for clinical texts or texts written by patients and NLP-support for mental health.<br>
 
     If you would like to talk, just drop me a line!
+    You can also check out the <a href="https://www.tu.berlin/en/qu/research/research-groups/health-legal-language-technology">lab's</a> website.
 
   </p>
 </section>
@@ -29,38 +30,28 @@ author_profile: true
   <article>
     <h3>Evaluation for clinical AI</h3>
     <p>
-      A model that is fluent on a benchmark can still be unsafe in a ward. I am
-      interested in counterfactual and adversarial evaluation designs that separate
-      detecting a problem from localising it and from explaining it.
+      A model that is fluent on a benchmark can still be unsafe at the bedside. I am interested in counterfactual and adversarial evaluation designs that separate detecting a problem from localising it and from explaining it.
     </p>
   </article>
 
   <article>
     <h3>De-identification and re-identification risk</h3>
     <p>
-      Removing names and dates is not the same as making a document safe. I study
-      indirect identifiers, the quasi-identifying detail that survives standard
-      de-identification, and how to measure the residual risk of a released corpus
-      in a way that maps onto data protection law rather than onto token-level F1.
+      Removing names and dates is not the same as making a document safe. I study indirect identifiers, the quasi-identifying detail that survives standard de-identification according to HIPAA, and how to measure the residual risk of a released corpus in a way that maps onto data protection law rather than onto token-level F1.
     </p>
   </article>
 
   <article>
     <h3>Multilingual pharmacovigilance</h3>
     <p>
-      Adverse drug events are reported by patients in whatever language they speak,
-      but detection systems are overwhelmingly English. I work on corpora and models
-      that cover German, French, Japanese and beyond, and on what is missed when
-      surveillance runs in English only.
+      Adverse drug events are reported by patients in whatever language they speak, but detection systems are overwhelmingly English. I work on corpora and models that cover German, French, Japanese and beyond, and on what is missed when surveillance runs in English only.
     </p>
   </article>
 
   <article>
     <h3>Synthetic and shareable clinical corpora</h3>
     <p>
-      Much clinical NLP is unreproducible because the data cannot travel. I contribute
-      to open synthetic benchmarks and shared tasks so that methods can be compared
-      without moving patient records.
+      Much clinical NLP is unreproducible because the data cannot be shared. I contribute to open synthetic benchmarks and shared tasks so that methods can be compared without moving real patient data.
     </p>
   </article>
 </div>
@@ -103,10 +94,7 @@ author_profile: true
 
 ### Supervision
 
-I supervise B.Sc. and M.Sc. theses on clinical and biomedical NLP. Current topics
-include anonymisation of therapeutic conversations, cross-lingual discourse analysis,
-and health misinformation. If you are a student at TU Berlin and one of these sounds
-like your kind of problem, write to me.
+I supervise B.Sc. and M.Sc. theses on clinical and biomedical NLP. Current topics include anonymisation of therapeutic conversations, cross-lingual discourse analysis, and health misinformation. If you are a student at TU Berlin or Potsdam University and one of these sounds like your kind of problem, write to me.
 
 ### Organisation
 
@@ -121,13 +109,13 @@ like your kind of problem, write to me.
   </li>
   <li>
     <span class="tag">2024, 2025, 2026</span>
-    Co-organiser, SMM4H-HeaRD shared task on multilingual adverse drug event detection.
+    Co-organiser, <a href="https://healthlanguageprocessing.org/smm4h-2026/">SMM4H-HeaRD</a> shared task on multilingual adverse drug event detection.
   </li>
 </ul>
 
 ### Reviewing
 
-ACL, EMNLP, NAACL, EACL, LREC-COLING, BioNLP, ClinicalNLP, Nature Communications, and related venues.
+ACL, EMNLP, NAACL, EACL, LREC, COLING, BioNLP, ClinicalNLP, Nature Communications, and related venues/journals.
 
 </section>
 
@@ -136,6 +124,6 @@ ACL, EMNLP, NAACL, EACL, LREC-COLING, BioNLP, ClinicalNLP, Nature Communications
 ## <span class="tag">04</span> Contact
 {: #contact-title}
 
-<p><span class="tag">Email</span> last-name @ tu-berlin.de</p>
+<p><span class="tag">Email</span> last name @ tu-berlin.de</p>
 
 </section>

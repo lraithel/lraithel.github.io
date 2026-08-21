@@ -5,10 +5,10 @@
     {
       "title": "MultiGraSCCo: A Multilingual Anonymization Benchmark with Annotations of Personal Identifiers",
       "authors": ["Ibrahim Baroud", "Christoph Otto", "Vera Czehmann", "Christine Hovhannisyan", "Lisa Raithel", "Sebastian Möller", "Roland Roller"],
-      "venue": "arXiv:2603.08879",
+      "venue": "LREC 2026",
       "year": 2026,
-      "kind": "preprint",
-      "links": [{ "label": "arXiv", "url": "https://doi.org/10.48550/arXiv.2603.08879" }]
+      "kind": "conference",
+      "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/2026.lrec-1.529/" }]
     },
     {
       "title": "Infherno: End-to-end Agent-based FHIR Resource Synthesis from Free-form Clinical Notes",
