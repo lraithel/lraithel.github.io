@@ -33,11 +33,6 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/lraithel"
 
-footer:
-  links:
-    - label: "Source on GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/lraithel/lraithel.github.io"
 
 # Top navigation — anchors into the sections of the single home page
 # (see _data/navigation.yml)
