@@ -4,7 +4,7 @@ author_profile: true
 ---
 
 <section class="hero">
-  <p class="hero-lede" style="margin-bottom:0.3em;">Postdoctoral researcher at QU Lab, TU Berlin & BIFOLD</p>
+  <p class="hero-tagline">Postdoctoral researcher at QU Lab, TU Berlin &amp; BIFOLD</p>
   <p class="hero-lede">
     I am a postdoc at the <a href="https://www.tu.berlin/qu">Quality and Usability Lab</a>,
     TU Berlin, affiliated with <a href="https://www.bifold.berlin/">BIFOLD</a> and the

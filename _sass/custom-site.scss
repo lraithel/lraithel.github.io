@@ -11,10 +11,17 @@ $ent-source: $primary-color;      // burgundy
 $ent-method: #5b3a8e;             // violet
 $ent-eval:   #b34d6e;             // dusty rose
 
+.hero-tagline {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $primary-color;
+  margin: 0 0 0.6rem;
+}
+
 .hero-lede {
   font-size: 1.05rem;
   color: $muted-text-color;
-  max-width: 62ch;
+  max-width: 85ch;
   margin: 0 0 1.5rem;
 }
 
@@ -266,6 +273,7 @@ details[open] > .pub-year::before { content: "\2212"; } // minus sign
   .pub-count { color: #b9a6ad; }
   .pub-title { color: #ede3e7; }
   .pub-authors, .pub-venue, .hero-lede, .themes article p { color: #b9a6ad; }
+  .hero-tagline { color: #e893b3; }
   .pub-authors .me { color: #ede3e7; }
   .kind, .tag { color: #e893b3; border-color: #4a3038; }
 
