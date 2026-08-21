@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """
-Regenerate publications.json from a DBLP author page.
+Regenerate _data/publications.json from a DBLP author page.
 
 Usage
 -----
-    python3 tools/dblp_to_json.py                    # writes publications.json
+    python3 tools/dblp_to_json.py                    # writes _data/publications.json
     python3 tools/dblp_to_json.py --keep-preprints   # keep arXiv versions of published papers
     python3 tools/dblp_to_json.py --out /tmp/pubs.json
 
 Why DBLP rather than a .bib file: DBLP's XML export is stable, has one
 record per publication, and already distinguishes journal articles from
 preprints. If you would rather curate the list by hand, just edit
-publications.json directly; this script is a convenience, not a
-dependency.
+_data/publications.json directly; this script is a convenience, not a
+dependency. Jekyll loads anything under _data/ automatically as
+site.data.publications, no separate build step needed.
 
 Stdlib only. No pip install needed.
 """
@@ -133,7 +134,7 @@ def to_entry(rec: ET.Element) -> dict:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--pid", default=DBLP_PID, help="DBLP person ID")
-    ap.add_argument("--out", default="publications.json")
+    ap.add_argument("--out", default="_data/publications.json")
     ap.add_argument(
         "--keep-preprints",
         action="store_true",

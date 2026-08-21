@@ -1,0 +1,85 @@
+# Site settings
+locale                : "en-US"
+title                 : "Lisa Raithel"
+title_separator       : "-"
+name                  : "Lisa Raithel"
+masthead_title        : "Lisa Raithel"
+description           : "Lisa Raithel, postdoctoral researcher in clinical and biomedical natural language processing at TU Berlin, BIFOLD and DFKI."
+url                   : "https://lraithel.github.io"
+repository             : "lraithel/lraithel.github.io"
+breadcrumbs           : false
+words_per_minute      : 200
+search                : false
+
+remote_theme          : "mmistakes/minimal-mistakes@4.28.1"
+minimal_mistakes_skin : "custom"
+
+# Site author, rendered by the theme's sidebar include
+author:
+  name    : "Lisa Raithel"
+  bio     : "Postdoc at the Quality and Usability Lab, TU Berlin, affiliated with BIFOLD and the Speech and Language Technology group at DFKI Berlin."
+  location: "Berlin, Germany"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:raithel@tu-berlin.de"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=S0TC4zMAAAAJ&hl=en"
+    - label: "DBLP"
+      icon: "fas fa-fw fa-database"
+      url: "https://dblp.org/pid/163/3199"
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0000-0002-5716-9566"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/lraithel"
+    - label: "CV (PDF)"
+      icon: "fas fa-fw fa-file-pdf"
+      url: "/cv.pdf"
+
+footer:
+  links:
+    - label: "Source on GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/lraithel/lraithel.github.io"
+
+# Top navigation — anchors into the sections of the single home page
+# (see _data/navigation.yml)
+
+# Build settings
+markdown              : kramdown
+highlighter           : rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  syntax_highlighter: rouge
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+permalink: /:categories/:title/
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-include-cache
+
+include:
+  - _pages
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - tools
+  - vendor
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development

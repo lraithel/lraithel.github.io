@@ -1,0 +1,236 @@
+/* ==========================================================================
+   Site-specific components - hero entity spans, research grid, publication
+   list. Layered on top of the burgundy skin; $primary-color etc. are already
+   in scope here since this partial is imported after the skin and the
+   theme's own variables.
+   ========================================================================== */
+
+// A light, a mid, and a dark step off the burgundy accent, used to keep the
+// three hero entity types visually distinct without leaving the palette.
+$ent-source: $primary-color;      // burgundy
+$ent-method: #5b3a8e;             // violet
+$ent-eval:   #b34d6e;             // dusty rose
+
+.hero-lede {
+  font-size: 1.05rem;
+  color: $muted-text-color;
+  max-width: 62ch;
+  margin: 0 0 1.5rem;
+}
+
+/* ---------- hero entity spans ---------- */
+.ent {
+  position: relative;
+  padding: 0.05em 0.3em;
+  border-radius: 0.3em;
+  font-style: normal;
+
+  &::after {
+    content: attr(data-label);
+    position: absolute;
+    left: 0.3em;
+    bottom: -1.15em;
+    font-family: $monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    opacity: 0.75;
+  }
+}
+
+.ent-a { background: mix(#fff, $ent-source, 88%); color: mix(#000, $ent-source, 12%); }
+.ent-a::after { color: $ent-source; }
+
+.ent-b { background: mix(#fff, $ent-method, 88%); color: mix(#000, $ent-method, 12%); }
+.ent-b::after { color: $ent-method; }
+
+.ent-c { background: mix(#fff, $ent-eval, 88%); color: mix(#000, $ent-eval, 12%); }
+.ent-c::after { color: $ent-eval; }
+
+h1 .ent { margin-inline: 0.05em; }
+
+/* ---------- research theme grid ---------- */
+.themes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin: 1.5rem 0 2.5rem;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+
+  article {
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    padding: 1.1rem 1.25rem;
+    background: mix($background-color, $primary-color, 97%);
+
+    h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.05rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: $muted-text-color;
+    }
+  }
+}
+
+/* ---------- publications ---------- */
+#publications .note {
+  font-size: 0.9rem;
+  color: $muted-text-color;
+  margin-top: -0.5rem;
+}
+
+.pub-year {
+  font-family: $monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: $primary-color;
+  border-bottom: 1px solid $border-color;
+  padding-bottom: 0.3rem;
+  margin: 2rem 0 0.75rem;
+}
+
+.pub {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid $border-color;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+
+  &:last-child { border-bottom: none; }
+}
+
+.pub-title {
+  font-weight: 600;
+}
+
+.kind {
+  display: inline-block;
+  margin-left: 0.5em;
+  padding: 0.05em 0.5em;
+  border: 1px solid mix($background-color, $primary-color, 65%);
+  border-radius: 999px;
+  font-family: $monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $primary-color;
+  vertical-align: middle;
+}
+
+.pub-authors {
+  font-size: 0.92rem;
+  color: $muted-text-color;
+}
+
+.pub-authors .me {
+  color: $text-color;
+  font-weight: 600;
+}
+
+.pub-venue {
+  font-size: 0.88rem;
+  color: $muted-text-color;
+  font-style: italic;
+}
+
+.pub-links a {
+  font-size: 0.82rem;
+  margin-right: 0.9rem;
+}
+
+/* ---------- teaching & service ---------- */
+.plain {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid $border-color;
+
+    &:last-child { border-bottom: none; }
+  }
+}
+
+.tag {
+  display: inline-block;
+  font-family: $monospace;
+  font-size: 0.7rem;
+  color: $primary-color;
+  margin-right: 0.5em;
+}
+
+/* ---------- dark mode ----------
+   Placed here (imported after the theme's own component partials) rather
+   than in the skin file, so these rules win the cascade tie against the
+   theme's unconditional, compile-time background colors. */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1b1216;
+    color: #ede3e7;
+  }
+
+  a { color: #e893b3; }
+  a:hover { color: #f3b2cb; }
+
+  .masthead { border-bottom-color: #3a2530; }
+
+  // the theme bakes a light $background-color into .greedy-nav and its
+  // mobile dropdown at compile time; override both explicitly
+  .greedy-nav {
+    background: #1b1216;
+  }
+  .greedy-nav .hidden-links {
+    background: #241820;
+    border-color: #3a2530;
+    box-shadow: 0 2px 4px 0 rgba(#000, 0.4);
+  }
+  .greedy-nav a,
+  .site-title,
+  .site-subtitle {
+    color: #ede3e7;
+  }
+  .greedy-nav .visible-links a:before {
+    background: #e893b3;
+  }
+  .greedy-nav__toggle {
+    color: #ede3e7;
+  }
+
+  .page__footer {
+    background-color: #150e11;
+    color: #b9a6ad;
+  }
+  .page__footer a { color: #e893b3; }
+  .page__footer-copyright { color: #8a7a80; }
+
+  .author__avatar img { border-color: #3a2530; }
+  .btn--inverse,
+  .author__urls-wrapper button.btn--inverse {
+    background-color: transparent;
+    color: #ede3e7;
+    border-color: #3a2530;
+  }
+
+  .themes article {
+    background: #211519;
+    border-color: #3a2530;
+  }
+
+  .pub, .plain li { border-bottom-color: #3a2530; }
+  .pub-year { border-bottom-color: #3a2530; color: #e893b3; }
+  .pub-title { color: #ede3e7; }
+  .pub-authors, .pub-venue, .hero-lede, .themes article p { color: #b9a6ad; }
+  .pub-authors .me { color: #ede3e7; }
+  .kind, .tag { color: #e893b3; border-color: #4a3038; }
+
+  .ent-a { background: mix(#000, $ent-source, 70%); color: #f3c7d8; }
+  .ent-b { background: mix(#000, $ent-method, 70%); color: #d9c9f2; }
+  .ent-c { background: mix(#000, $ent-eval, 70%); color: #f5cdd9; }
+}

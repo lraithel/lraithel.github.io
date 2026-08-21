@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Custom skin - burgundy
+   ========================================================================== */
+
+/* Colors */
+$background-color:           #faf7f8 !default;
+$text-color:                 #241a20 !default;
+$muted-text-color:           mix(#fff, $text-color, 35%) !default;
+$primary-color:               #7a1f44 !default;
+$border-color:                mix(#000, $background-color, 8%) !default;
+$code-background-color:       mix(#000, $background-color, 4%) !default;
+$code-background-color-dark:  mix(#000, $background-color, 10%) !default;
+$form-background-color:       mix(#000, $background-color, 4%) !default;
+$footer-background-color:     mix(#000, $background-color, 6%) !default;
+$link-color:                  $primary-color !default;
+$link-color-hover:            mix(#000, $link-color, 15%) !default;
+$link-color-visited:          mix(#000, $link-color, 30%) !default;
+$masthead-link-color:         $text-color !default;
+$masthead-link-color-hover:   $primary-color !default;
+$navicon-link-color-hover:    mix(#000, $background-color, 8%) !default;
+
+// Dark-mode overrides for this skin live in _custom-site.scss, not here:
+// that partial is imported after the theme's own component styles, so its
+// rules win the cascade tie against the theme's unconditional (compile-time)
+// background colors. A dark @media block placed in this file would be
+// imported *before* those component styles and silently lose every tie.

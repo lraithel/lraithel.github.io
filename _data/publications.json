@@ -115,12 +115,28 @@
       "links": [{ "label": "DOI", "url": "https://doi.org/10.20736/0002001327" }]
     },
     {
+      "title": "Cross-lingual Approaches for the Detection of Adverse Drug Reactions in German from a Patient's Perspective",
+      "authors": ["Lisa Raithel", "Philippe Thomas", "Roland Roller", "Oliver Sapina", "Sebastian Möller", "Pierre Zweigenbaum"],
+      "venue": "LREC 2022",
+      "year": 2022,
+      "kind": "conference",
+      "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/2022.lrec-1.388/" }]
+    },
+    {
       "title": "Cross-lingual Neural Vector Conceptualization",
       "authors": ["Lisa Raithel", "Robert Schwarzenberg"],
       "venue": "NLPCC 2019",
       "year": 2019,
       "kind": "conference",
       "links": []
+    },
+    {
+      "title": "Neural Vector Conceptualization for Word Vector Space Interpretation",
+      "authors": ["Robert Schwarzenberg", "Lisa Raithel", "David Harbecke"],
+      "venue": "RepEval @ NAACL 2019",
+      "year": 2019,
+      "kind": "workshop",
+      "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/W19-2001/" }]
     },
     {
       "title": "Pragmatic Query Answering: Results from a Quantitative Evaluation",
