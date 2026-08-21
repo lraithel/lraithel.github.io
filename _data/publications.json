@@ -19,6 +19,14 @@
       "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/2026.eacl-demo.13/" }]
     },
     {
+      "title": "Overview of the 11th Social Media Mining for Health (#SMM4H) and Health Real-World Data (HeaRD) Shared Tasks at ACL 2026",
+      "authors": ["Guillermo Lopez-Garcia", "Jose Miguel Acitores Cortina", "Jacob Berkowitz", "Joey Chan", "Sumon Kanti Dey", "Ivan Flores Amaro", "Fernando Gallego", "Lauren Gryboski", "Ari Z. Klein", "Farnoush Zeidi Kolehparcheh", "Martin Krallinger", "Salvador Lima-Lopez", "Yujun Ma", "Tomohiro Nishiyama", "Ahmad Rezaie Mianroodi", "Amirali Rezaie Mianroodi", "Lisa Raithel", "Roland Roller", "Judith Rosell", "Frank Rudzicz", "Abeed Sarker", "Nicholas Tatonetti", "Philippe Thomas", "Elena Tutubalina", "Dongfang Xu", "Farnaz Zeidi", "Yu Zhai", "Pierre Zweigenbaum", "Graciela Gonzalez-Hernandez"],
+      "venue": "SMM4H-HeaRD 2026",
+      "year": 2026,
+      "kind": "shared task",
+      "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/2026.smm4h-1.53/" }]
+    },
+    {
       "title": "Cross- and multi-lingual medication detection: a transformer-based analysis",
       "authors": ["Lisa Raithel", "Johann Frei", "Philippe Thomas", "Roland Roller", "Pierre Zweigenbaum", "Sebastian Möller", "Frank Kramer"],
       "venue": "BMC Medical Informatics and Decision Making 25(1):359",
