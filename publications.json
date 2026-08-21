@@ -1,0 +1,134 @@
+{
+  "_comment": "Edit this file to update the publication list. Author names matching 'highlight' are bolded. Regenerate from DBLP with tools/dblp_to_json.py. Entries below were taken from DBLP pid 163/3199 and should be checked before publishing.",
+  "highlight": "Lisa Raithel",
+  "entries": [
+    {
+      "title": "MultiGraSCCo: A Multilingual Anonymization Benchmark with Annotations of Personal Identifiers",
+      "authors": ["Ibrahim Baroud", "Christoph Otto", "Vera Czehmann", "Christine Hovhannisyan", "Lisa Raithel", "Sebastian Möller", "Roland Roller"],
+      "venue": "arXiv:2603.08879",
+      "year": 2026,
+      "kind": "preprint",
+      "links": [{ "label": "arXiv", "url": "https://doi.org/10.48550/arXiv.2603.08879" }]
+    },
+    {
+      "title": "Infherno: End-to-end Agent-based FHIR Resource Synthesis from Free-form Clinical Notes",
+      "authors": ["Johann Frei", "Nils Feldhus", "Lisa Raithel", "Roland Roller", "Alexander Meyer", "Frank Kramer"],
+      "venue": "EACL 2026 (System Demonstrations)",
+      "year": 2026,
+      "kind": "demo",
+      "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/2026.eacl-demo.13/" }]
+    },
+    {
+      "title": "Cross- and multi-lingual medication detection: a transformer-based analysis",
+      "authors": ["Lisa Raithel", "Johann Frei", "Philippe Thomas", "Roland Roller", "Pierre Zweigenbaum", "Sebastian Möller", "Frank Kramer"],
+      "venue": "BMC Medical Informatics and Decision Making 25(1):359",
+      "year": 2025,
+      "kind": "journal",
+      "links": [{ "label": "DOI", "url": "https://doi.org/10.1186/s12911-025-03179-1" }]
+    },
+    {
+      "title": "RecordTwin: Towards Creating Safe Synthetic Clinical Corpora",
+      "authors": ["Seiji Shimizu", "Ibrahim Baroud", "Lisa Raithel", "Shuntaro Yada", "Shoko Wakamiya", "Eiji Aramaki"],
+      "venue": "Findings of ACL 2025",
+      "year": 2025,
+      "kind": "conference",
+      "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/2025.findings-acl.759/" }]
+    },
+    {
+      "title": "Beyond De-Identification: A Structured Approach for Defining and Detecting Indirect Identifiers in Medical Texts",
+      "authors": ["Ibrahim Baroud", "Lisa Raithel", "Sebastian Möller", "Roland Roller"],
+      "venue": "arXiv:2502.13342",
+      "year": 2025,
+      "kind": "preprint",
+      "links": [{ "label": "arXiv", "url": "https://doi.org/10.48550/arXiv.2502.13342" }]
+    },
+    {
+      "title": "MIMIC-III-IPI: Discharge Summaries from MIMIC-III with Indirect Personal Identifier Annotations",
+      "authors": ["Ibrahim Baroud", "Lisa Raithel", "Sebastian Möller", "Roland Roller"],
+      "venue": "Zenodo",
+      "year": 2025,
+      "kind": "dataset",
+      "links": [{ "label": "DOI", "url": "https://doi.org/10.5281/zenodo.15372705" }]
+    },
+    {
+      "title": "NTCIR-18 MedNLP-CHAT: Determining Medical, Ethical and Legal Risks in Patient-Doctor Conversations. Task Overview",
+      "authors": ["Eiji Aramaki", "Shoko Wakamiya", "Shuntaro Yada", "Shohei Hisada", "Tomohiro Nishiyama", "Lenard Paulo Tamayo", "Jingnan Xiao", "Axalia Levenchaud", "Pierre Zweigenbaum", "Christoph Otto", "Jerycho Pasniczek", "Philippe Thomas", "Nathan Pohl", "Wiebke Duettmann", "Lisa Raithel", "Roland Roller"],
+      "venue": "NTCIR-18",
+      "year": 2025,
+      "kind": "shared task",
+      "links": [{ "label": "DOI", "url": "https://doi.org/10.20736/0002002051" }]
+    },
+    {
+      "title": "FU-TU-DFKI at eRisk 2025: A Linguistically Informed but Overdiagnosing Approach to Early Depression Detection",
+      "authors": ["Elif Kara", "Rosa Esther Martín-Peña", "Lisa Raithel"],
+      "venue": "CLEF 2025 Working Notes",
+      "year": 2025,
+      "kind": "workshop",
+      "links": [{ "label": "PDF", "url": "https://ceur-ws.org/Vol-4038/paper_123.pdf" }]
+    },
+    {
+      "title": "Cross-lingual Information Extraction for the Assessment and Prevention of Adverse Drug Reactions",
+      "authors": ["Lisa Raithel"],
+      "venue": "PhD thesis, Université Paris-Saclay and TU Berlin",
+      "year": 2024,
+      "kind": "thesis",
+      "links": [{ "label": "HAL", "url": "https://tel.archives-ouvertes.fr/tel-04513068" }]
+    },
+    {
+      "title": "A Dataset for Pharmacovigilance in German, French, and Japanese: Annotating Adverse Drug Reactions across Languages",
+      "authors": ["Lisa Raithel", "Hui-Syuan Yeh", "Shuntaro Yada", "Cyril Grouin", "Thomas Lavergne", "Aurélie Névéol", "Patrick Paroubek", "Philippe Thomas", "Tomohiro Nishiyama", "Sebastian Möller", "Eiji Aramaki", "Yuji Matsumoto", "Roland Roller", "Pierre Zweigenbaum"],
+      "venue": "LREC-COLING 2024",
+      "year": 2024,
+      "kind": "conference",
+      "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/2024.lrec-main.36" }]
+    },
+    {
+      "title": "Evaluating the Robustness of Adverse Drug Event Classification Models using Templates",
+      "authors": ["Dorothea MacPhail", "David Harbecke", "Lisa Raithel", "Sebastian Möller"],
+      "venue": "BioNLP @ ACL 2024",
+      "year": 2024,
+      "kind": "workshop",
+      "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/2024.bionlp-1.3" }]
+    },
+    {
+      "title": "Improving Self-training with Prototypical Learning for Source-Free Domain Adaptation on Clinical Text",
+      "authors": ["Seiji Shimizu", "Shuntaro Yada", "Lisa Raithel", "Eiji Aramaki"],
+      "venue": "BioNLP @ ACL 2024",
+      "year": 2024,
+      "kind": "workshop",
+      "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/2024.bionlp-1.1" }]
+    },
+    {
+      "title": "DFKI-NLP at SemEval-2024 Task 2: Towards Robust LLMs Using Data Perturbations and MinMax Training",
+      "authors": ["Bhuvanesh Verma", "Lisa Raithel"],
+      "venue": "SemEval @ NAACL 2024",
+      "year": 2024,
+      "kind": "shared task",
+      "links": [{ "label": "DOI", "url": "https://doi.org/10.18653/v1/2024.semeval-1.99" }]
+    },
+    {
+      "title": "NTCIR-17 MedNLP-SC Social Media Adverse Drug Event Detection: Subtask Overview",
+      "authors": ["Shoko Wakamiya", "Lis Kanashiro Pereira", "Lisa Raithel", "Hui-Syuan Yeh", "Peitao Han", "Seiji Shimizu", "Tomohiro Nishiyama", "and others"],
+      "venue": "NTCIR-17",
+      "year": 2023,
+      "kind": "shared task",
+      "links": [{ "label": "DOI", "url": "https://doi.org/10.20736/0002001327" }]
+    },
+    {
+      "title": "Cross-lingual Neural Vector Conceptualization",
+      "authors": ["Lisa Raithel", "Robert Schwarzenberg"],
+      "venue": "NLPCC 2019",
+      "year": 2019,
+      "kind": "conference",
+      "links": []
+    },
+    {
+      "title": "Pragmatic Query Answering: Results from a Quantitative Evaluation",
+      "authors": ["Jon Scott Stevens", "Anton Benz", "Sebastian Reuße", "Ralf Klabunde", "Lisa Raithel"],
+      "venue": "NLDB 2015",
+      "year": 2015,
+      "kind": "conference",
+      "links": []
+    }
+  ]
+}
