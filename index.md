@@ -64,8 +64,7 @@ author_profile: true
 {: #publications-title}
 
 <p class="note">
-  Peer-reviewed publications only - preprints not yet accepted anywhere are
-  left off this list. Most recent list on <a href="https://scholar.google.com/citations?user=S0TC4zMAAAAJ&hl=en">Google Scholar</a>.
+  Most recent list on <a href="https://scholar.google.com/citations?user=S0TC4zMAAAAJ&hl=en">Google Scholar</a>.
 </p>
 
 {% assign entries = site.data.publications.entries | where_exp: "e", "e.kind != 'preprint'" %}
@@ -78,7 +77,7 @@ author_profile: true
   {% for p in grp.items %}
   <div class="pub">
     <span class="pub-title">{{ p.title }}{% if p.kind %}<span class="kind">{{ p.kind }}</span>{% endif %}</span>
-    <span class="pub-authors">{% for a in p.authors %}{% if a == highlight %}<span class="me">{{ a }}</span>{% else %}{{ a }}{% endif %}{% unless forloop.last %}{% if forloop.rindex == 2 %} and {% else %}, {% endif %}{% endunless %}{% endfor %}</span>
+    <span class="pub-authors">{% for a in p.authors %}{% if a == highlight %}<span class="me">{{ a }}</span>{% else %}{{ a }}{% endif %}{% if p.equal_contrib_count and forloop.index <= p.equal_contrib_count %}<sup>*</sup>{% endif %}{% unless forloop.last %}{% if forloop.rindex == 2 %} and {% else %}, {% endif %}{% endunless %}{% endfor %}</span>
     <span class="pub-venue"><em>{{ p.venue }}</em></span>
     {% if p.links.size > 0 %}<span class="pub-links">{% for l in p.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</span>{% endif %}
   </div>
@@ -86,6 +85,8 @@ author_profile: true
   </div>
 </details>
 {% endfor %}
+
+<p class="note">* Equal contribution.</p>
 
 </section>
 
