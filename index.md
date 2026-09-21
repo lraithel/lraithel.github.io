@@ -30,28 +30,28 @@ author_profile: true
   <article>
     <h3>Evaluation for clinical AI</h3>
     <p>
-      A model that is fluent on a benchmark can still be unsafe at the bedside. I am interested in counterfactual and adversarial evaluation designs that separate detecting a problem from localising it and from explaining it.
+      Getting the right label on a benchmark is not the same as being safe to use on a real patient. I work on counterfactual and adversarial evaluation designs to check whether a model actually catches a problem, can point to where it is, and can explain why - three different questions that a single accuracy number tends to hide.
     </p>
   </article>
 
   <article>
     <h3>De-identification and re-identification risk</h3>
     <p>
-      Removing names and dates is not the same as making a document safe. I study indirect identifiers, the quasi-identifying detail that survives standard de-identification according to HIPAA, and how to measure the residual risk of a released corpus in a way that maps onto data protection law rather than onto token-level F1.
+      I look at indirect identifiers - the details left in a document after names and dates are removed that can still narrow a patient down, like a rare diagnosis or an unusual age and location combination. Under HIPAA that risk is supposed to be measured, not assumed, and I work on ways to actually quantify how much of it survives standard de-identification.
     </p>
   </article>
 
   <article>
     <h3>Multilingual pharmacovigilance</h3>
     <p>
-      Adverse drug events are reported by patients in whatever language they speak, but detection systems are overwhelmingly English. I work on corpora and models that cover German, French, Japanese and beyond, and on what is missed when surveillance runs in English only.
+      Patients report side effects in whatever language they speak, but almost all detection systems are trained and tested in English. I build corpora and models for German, French, and Japanese, and try to figure out what gets missed when surveillance only runs in one language.
     </p>
   </article>
 
   <article>
     <h3>Synthetic and shareable clinical corpora</h3>
     <p>
-      Much clinical NLP is unreproducible because the data cannot be shared. I contribute to open synthetic benchmarks and shared tasks so that methods can be compared without moving real patient data.
+      A lot of clinical NLP results can't be reproduced simply because the data behind them can never leave the hospital. I work on synthetic benchmarks and shared tasks that let people compare methods against each other without ever moving a real patient record.
     </p>
   </article>
 </div>
@@ -125,22 +125,20 @@ ACL, EMNLP, NAACL, EACL, LREC, COLING, BioNLP, ClinicalNLP, Nature Communication
 ## <span class="tag">04</span> Freelancing
 {: #freelancing-title}
 
-Alongside my research, I take on freelance and advisory work at the
-intersection of NLP and health - bringing the same rigor I apply to
-academic work to applied, product-facing problems.
+Alongside my research, I sometimes take on freelance and advisory work at
+the intersection of NLP and healthcare (and sometimes other topics such as
+deepfake detection). Bridging the gap between academia and industry is
+exciting, and often provides a different perspective on problems we try to
+solve with AI.
 
 <ul class="plain">
   <li>
     <span class="tag">Advisory</span>
-    Scientific and ML advisory for health-tech and NLP products, e.g. ongoing work with Gretchen AI.
+    Scientific advisory for health-tech and NLP products, e.g. ongoing work with <a href="https://gretchen-ai.com/de/">Gretchen AI</a>.
   </li>
   <li>
     <span class="tag">Talks</span>
     Invited talks and workshops on clinical NLP, multilingual pharmacovigilance, and de-identification.
-  </li>
-  <li>
-    <span class="tag">Consulting</span>
-    Short, project-based engagements: model and dataset evaluation, annotation design, literature reviews.
   </li>
 </ul>
 
