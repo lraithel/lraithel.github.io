@@ -4,7 +4,7 @@ author_profile: true
 ---
 
 <section class="hero">
-  <p class="hero-tagline">Postdoctoral researcher at QU Lab, TU Berlin &amp; BIFOLD</p>
+  <h1 class="hero-tagline">Postdoctoral researcher at QU Lab, TU Berlin &amp; BIFOLD</h1>
   <p class="hero-lede">
     I am a postdoc at the <a href="https://www.tu.berlin/qu">Quality and Usability Lab</a>,
     TU Berlin, affiliated with <a href="https://www.bifold.berlin/">BIFOLD</a> and the
@@ -64,10 +64,11 @@ author_profile: true
 {: #publications-title}
 
 <p class="note">
-  Most recent list on <a href="https://scholar.google.com/citations?user=S0TC4zMAAAAJ&hl=en">Google Scholar</a>.
+  Peer-reviewed publications only - preprints not yet accepted anywhere are
+  left off this list. Most recent list on <a href="https://scholar.google.com/citations?user=S0TC4zMAAAAJ&hl=en">Google Scholar</a>.
 </p>
 
-{% assign entries = site.data.publications.entries %}
+{% assign entries = site.data.publications.entries | where_exp: "e", "e.kind != 'preprint'" %}
 {% assign highlight = site.data.publications.highlight %}
 {% assign year_groups = entries | group_by: "year" | sort: "name" | reverse %}
 {% for grp in year_groups %}
@@ -119,9 +120,37 @@ ACL, EMNLP, NAACL, EACL, LREC, COLING, BioNLP, ClinicalNLP, Nature Communication
 
 </section>
 
+<section id="freelancing" markdown="1">
+
+## <span class="tag">04</span> Freelancing
+{: #freelancing-title}
+
+Alongside my research, I take on freelance and advisory work at the
+intersection of NLP and health - bringing the same rigor I apply to
+academic work to applied, product-facing problems.
+
+<ul class="plain">
+  <li>
+    <span class="tag">Advisory</span>
+    Scientific and ML advisory for health-tech and NLP products, e.g. ongoing work with Gretchen AI.
+  </li>
+  <li>
+    <span class="tag">Talks</span>
+    Invited talks and workshops on clinical NLP, multilingual pharmacovigilance, and de-identification.
+  </li>
+  <li>
+    <span class="tag">Consulting</span>
+    Short, project-based engagements: model and dataset evaluation, annotation design, literature reviews.
+  </li>
+</ul>
+
+Interested in working together? Get in touch via the <a href="#contact">contact section below</a>.
+
+</section>
+
 <section id="contact" markdown="1">
 
-## <span class="tag">04</span> Contact
+## <span class="tag">05</span> Contact
 {: #contact-title}
 
 <p><span class="tag">Email</span> last name @ tu-berlin.de</p>

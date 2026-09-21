@@ -11,11 +11,24 @@ $ent-source: $primary-color;      // burgundy
 $ent-method: #5b3a8e;             // violet
 $ent-eval:   #b34d6e;             // dusty rose
 
+.hero {
+  margin-bottom: 1.5rem;
+}
+
 .hero-tagline {
-  font-size: 1.05rem;
+  // The page's one true h1 - deliberately larger than the "01 Research"
+  // etc. h2s below it (theme default ~1.65rem), so it reads as the actual
+  // top of the hierarchy instead of getting lost above them.
+  //
+  // unquote() keeps this opaque to Sass: the old Ruby Sass compiler that
+  // GitHub Pages' build (and jekyll-sass-converter 1.5.2 here) still uses
+  // tries to evaluate mixed-unit clamp() math at compile time instead of
+  // passing it through, and throws "Incompatible units: 'vw' and 'rem'".
+  font-size: unquote("clamp(1.75rem, 1.35rem + 1.6vw, 2.25rem)");
   font-weight: 700;
+  line-height: 1.25;
   color: $primary-color;
-  margin: 0 0 0.6rem;
+  margin: 0 0 1rem;
 }
 
 .hero-lede {
