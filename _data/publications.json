@@ -11,6 +11,22 @@
       "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/2026.lrec-1.529/" }]
     },
     {
+      "title": "Evaluating Encoder- and LLM-Based Approaches for Robust Indirect Personal Identifier Detection",
+      "authors": ["Christoph Otto", "Ibrahim Baroud", "Akiko Aizawa", "Sebastian Möller", "Roland Roller", "Lisa Raithel"],
+      "venue": "LEGAL2026 & CALD-pseudo 2026 @ LREC 2026",
+      "year": 2026,
+      "kind": "workshop",
+      "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/2026.legal-1.11/" }]
+    },
+    {
+      "title": "Developing Annotation Guidelines for CSAM Prevention Interventions: Psychosocial Risk and Protective Factors Grounded in Research and Clinical Practice",
+      "authors": ["Vera Czehmann", "Christine Hovhannisyan", "Lena Elisabeth Hoffmann", "Paula Busch", "Ibrahim Baroud", "Sebastian Möller", "Roland Roller", "Hannes Gieseler", "Lisa Raithel"],
+      "venue": "RaPID-6@MENTAL.ai @ LREC 2026",
+      "year": 2026,
+      "kind": "workshop",
+      "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/2026.rapid-1.11/" }]
+    },
+    {
       "title": "Infherno: End-to-end Agent-based FHIR Resource Synthesis from Free-form Clinical Notes",
       "authors": ["Johann Frei", "Nils Feldhus", "Lisa Raithel", "Roland Roller", "Alexander Meyer", "Frank Kramer"],
       "venue": "EACL 2026 (System Demonstrations)",
@@ -32,6 +48,7 @@
       "venue": "BMC Medical Informatics and Decision Making 25(1):359",
       "year": 2025,
       "kind": "journal",
+      "equal_contrib_count": 2,
       "links": [{ "label": "DOI", "url": "https://doi.org/10.1186/s12911-025-03179-1" }]
     },
     {
@@ -88,6 +105,7 @@
       "venue": "LREC-COLING 2024",
       "year": 2024,
       "kind": "conference",
+      "equal_contrib_count": 2,
       "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/2024.lrec-main.36" }]
     },
     {
