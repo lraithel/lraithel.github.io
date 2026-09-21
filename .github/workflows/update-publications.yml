@@ -23,6 +23,8 @@ jobs:
           python-version: "3.x"
 
       - name: Fetch and merge publications from Semantic Scholar
+        env:
+          S2_API_KEY: ${{ secrets.S2_API_KEY }}
         run: python3 tools/update_publications.py
 
       - name: Check for changes

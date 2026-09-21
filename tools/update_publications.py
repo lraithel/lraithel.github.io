@@ -58,6 +58,15 @@ USER_AGENT = "lraithel-site-publications-bot (personal site build, https://lrait
 
 PAPER_FIELDS = "title,year,venue,publicationVenue,externalIds,authors,publicationTypes"
 
+# Semantic Scholar's unauthenticated tier shares a rate limit across every
+# unauthenticated caller on the same IP range - which includes every other
+# GitHub Actions job in the world hitting the API at the same moment, so
+# 429s are the normal case, not an edge case. Get a free key at
+# https://www.semanticscholar.org/product/api#api-key-form and set it as
+# the S2_API_KEY repository secret; with a key this runs against a
+# dedicated quota instead of that shared pool.
+S2_API_KEY = os.environ.get("S2_API_KEY")
+
 
 # --------------------------------------------------------------------------
 # Semantic Scholar API
@@ -65,17 +74,24 @@ PAPER_FIELDS = "title,year,venue,publicationVenue,externalIds,authors,publicatio
 
 def http_get_json(url: str, params: dict) -> dict:
     full_url = url + "?" + urllib.parse.urlencode(params)
-    req = urllib.request.Request(full_url, headers={"User-Agent": USER_AGENT})
-    for attempt in range(3):
+    headers = {"User-Agent": USER_AGENT}
+    if S2_API_KEY:
+        headers["x-api-key"] = S2_API_KEY
+    req = urllib.request.Request(full_url, headers=headers)
+
+    attempts = 6
+    for attempt in range(attempts):
         try:
             with urllib.request.urlopen(req, timeout=30) as resp:
                 return json.load(resp)
         except urllib.error.HTTPError as e:
-            if e.code == 429 and attempt < 2:
-                time.sleep(5 * (attempt + 1))
-                continue
-            raise
-    raise RuntimeError(f"gave up on {full_url} after retries")
+            if e.code != 429 or attempt == attempts - 1:
+                raise
+            retry_after = e.headers.get("Retry-After") if e.headers else None
+            wait = int(retry_after) if retry_after and retry_after.isdigit() else 10 * (attempt + 1)
+            print(f"  429 from {url}, waiting {wait}s (attempt {attempt + 1}/{attempts})", file=sys.stderr)
+            time.sleep(wait)
+    raise RuntimeError(f"gave up on {full_url} after {attempts} attempts")
 
 
 def search_author(name: str) -> list:
