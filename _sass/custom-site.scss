@@ -80,7 +80,6 @@ h1 .ent { margin-inline: 0.05em; }
   }
 
   article {
-    border: 1px solid $border-color;
     border-radius: 8px;
     padding: 1.1rem 1.25rem;
     background: mix($background-color, $primary-color, 97%);
@@ -151,13 +150,13 @@ details[open] > .pub-year::before { content: "\2212"; } // minus sign
 }
 
 .pub {
-  padding: 0.7rem 0;
-  border-top: 1px solid $border-color;
+  padding: 0;
+  margin-bottom: 1.1rem;
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
 
-  &:first-child { border-top: none; }
+  &:last-child { margin-bottom: 0; }
 }
 
 .pub-title {
@@ -206,10 +205,10 @@ details[open] > .pub-year::before { content: "\2212"; } // minus sign
   padding: 0;
 
   li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid $border-color;
+    padding: 0;
+    margin-bottom: 0.9rem;
 
-    &:last-child { border-bottom: none; }
+    &:last-child { margin-bottom: 0; }
   }
 }
 
@@ -275,12 +274,9 @@ details[open] > .pub-year::before { content: "\2212"; } // minus sign
 
   .themes article {
     background: #211519;
-    border-color: #3a2530;
   }
 
   .pub-year-group { border-bottom-color: #3a2530; }
-  .pub { border-top-color: #3a2530; }
-  .plain li { border-bottom-color: #3a2530; }
   .pub-year { color: #e893b3; }
   .pub-year:hover { color: #f3b2cb; }
   .pub-count { color: #b9a6ad; }
