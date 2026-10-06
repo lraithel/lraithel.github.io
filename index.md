@@ -8,13 +8,12 @@ author_profile: true
   <p class="hero-lede">
     I am a postdoc at the <a href="https://www.tu.berlin/qu">Quality and Usability Lab</a>,
     TU Berlin, affiliated with <a href="https://www.bifold.berlin/">BIFOLD</a> and the
-    Speech and Language Technology group at <a href="https://www.dfki.de/en/web">DFKI Berlin</a>,
-    as well as with <a href="https://ikim.charite.de/">Charité-IKIM, the Institute of Artificial Intelligence in Medicine.</a>
+    Speech and Language Technology group at <a href="https://www.dfki.de/en/web/research/research-departments/speech-and-language-technology">DFKI Berlin</a>,
+    as well as with <a href="https://ikim.charite.de/">Charité-IKIM, the Institute of Artificial Intelligence in Medicine.</a><br>
     I did my PhD jointly at TU Berlin and Université Paris-Saclay on cross-lingual
-    information extraction for pharmacovigilance. <br>
+    information extraction for pharmacovigilance.<br>
     My work now focuses on robustness of language-based systems in the clinical/biomedical domain,
     anonymization techniques for clinical texts or texts written by patients and NLP-support for mental health.<br>
-
     If you would like to talk, just drop me a line!
     You can also check out the <a href="https://www.tu.berlin/en/qu/research/research-groups/health-legal-language-technology">lab's</a> website.
 
@@ -96,7 +95,7 @@ author_profile: true
 
 ### Supervision
 
-I supervise B.Sc. and M.Sc. theses on clinical and biomedical NLP. Current topics include anonymisation of therapeutic conversations, cross-lingual discourse analysis, and health misinformation. If you are a student at TU Berlin or Potsdam University and one of these sounds like your kind of problem, write to me.
+I supervise B.Sc. and M.Sc. theses on clinical and biomedical NLP. Current topics include anonymization of therapeutic conversations, cross-lingual discourse analysis, and health misinformation. If you are a student at TU Berlin or Potsdam University and one of these sounds like your kind of problem, write to me.
 
 ### Organisation
 
@@ -142,8 +141,6 @@ solve with AI.
     Invited talks and workshops on clinical NLP, multilingual pharmacovigilance, and de-identification.
   </li>
 </ul>
-
-
 </section>
 
 <section id="contact" markdown="1">
