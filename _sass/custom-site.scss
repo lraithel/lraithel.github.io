@@ -15,6 +15,27 @@ $ent-eval:   #b34d6e;             // dusty rose
   margin-bottom: 1.5rem;
 }
 
+// Give every top-level section some breathing room from the one before it -
+// whatever the previous section happened to end with (a list, a paragraph,
+// a grid) shouldn't determine how close the next heading sits.
+section[id] {
+  margin-top: 3rem;
+}
+
+.author__avatar img {
+  // Theme default is max-width:110px with no height set, so a non-square
+  // photo renders as an oval once border-radius:50% is applied. Forcing a
+  // square box + object-fit crops it into an actual circle instead.
+  width: 160px;
+  height: 160px;
+  max-width: 160px;
+  object-fit: cover;
+  // The source photo is portrait-oriented with the subject's face in the
+  // upper half; biasing the crop toward the top keeps more of the
+  // background in frame instead of centering and losing it.
+  object-position: 50% 20%;
+}
+
 .hero-tagline {
   // The page's one true h1 - deliberately larger than the "01 Research"
   // etc. h2s below it (theme default ~1.65rem), so it reads as the actual
