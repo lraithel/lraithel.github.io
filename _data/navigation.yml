@@ -5,5 +5,7 @@ main:
     url: /#publications
   - title: "Teaching"
     url: /#teaching
+  - title: "Freelancing"
+    url: /#freelancing
   - title: "Contact"
     url: /#contact

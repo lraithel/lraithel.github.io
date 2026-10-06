@@ -17,6 +17,7 @@ minimal_mistakes_skin : "custom"
 # Site author, rendered by the theme's sidebar include
 author:
   name    : "Lisa Raithel"
+  avatar  : "/assets/images/lisa_1.jpeg"
   bio     : "Postdoc at the Quality and Usability Lab, TU Berlin, affiliated with BIFOLD and the Speech and Language Technology group at DFKI Berlin."
   location: "Berlin, Germany"
   links:

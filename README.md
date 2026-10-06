@@ -32,7 +32,7 @@ bundle exec jekyll serve
 ## Update the publication list
 
 A scheduled GitHub Action (`.github/workflows/update-publications.yml`)
-runs regularyl, and can be run on demand from the Actions tab
+runs every Monday, and can be run on demand from the Actions tab
 ("Update publications" → "Run workflow") - to fetch from
 [Semantic Scholar](https://www.semanticscholar.org/), merge in anything new,
 and open a PR if there's a diff. It only adds new entries or fills in a
@@ -40,6 +40,15 @@ real venue for an entry that's currently listed as a bare arXiv preprint;
 it never deletes anything, so entries Semantic Scholar doesn't index (the
 PhD thesis, Zenodo datasets, CEUR workshop notes) are left alone. Review
 the PR like any other before merging.
+
+Semantic Scholar's unauthenticated tier shares its rate limit across every
+unauthenticated caller on the same IP range, which in practice includes
+every other GitHub Actions job in the world running at that moment - the
+scheduled run failed with a 429 every week for the first month. Get a free
+key at https://www.semanticscholar.org/product/api#api-key-form and add it
+as a repository secret named `S2_API_KEY` (Settings → Secrets and
+variables → Actions → New repository secret) to run against a dedicated
+quota instead. Without a key it still works, just less reliably.
 
 To run:
 

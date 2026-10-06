@@ -4,7 +4,7 @@ author_profile: true
 ---
 
 <section class="hero">
-  <p class="hero-tagline">Postdoctoral researcher at QU Lab, TU Berlin &amp; BIFOLD</p>
+  <h1 class="hero-tagline">Hi, I'm Lisa!</h1>
   <p class="hero-lede">
     I am a postdoc at the <a href="https://www.tu.berlin/qu">Quality and Usability Lab</a>,
     TU Berlin, affiliated with <a href="https://www.bifold.berlin/">BIFOLD</a> and the
@@ -28,30 +28,30 @@ author_profile: true
 
 <div class="themes">
   <article>
-    <h3>Evaluation for clinical AI</h3>
+    <h3>Evaluation for Clinical AI</h3>
     <p>
       I am interested in counterfactual and adversarial evaluation designs that separate detecting a problem from localising it and from explaining it, to build models that are not only good on a benchmark but also in the hospital.
     </p>
   </article>
 
   <article>
-    <h3>De-identification and re-identification risk</h3>
+    <h3>De-identification and Re-identification Risk</h3>
     <p>
-      Removing names and dates is not the same as making a document safe. I study indirect identifiers, the quasi-identifying detail that is still left after standard de-identification according to HIPAA, and how to measure the residual risk of a released corpus in a way that maps onto data protection law rather than onto token-level F1.
+      I look at indirect identifiers -- the details left in a document after names and dates are removed that can still narrow a patient down, like a rare diagnosis or an unusual age and location combination, working on ways to actually quantify how much of it survives standard de-identification.
     </p>
   </article>
 
   <article>
-    <h3>Multilingual pharmacovigilance</h3>
+    <h3>Multilingual Pharmacovigilance</h3>
     <p>
-      Adverse drug events are reported by patients in whatever language they speak, but detection systems are overwhelmingly English. I work on corpora and models that cover German, French, Japanese and beyond, and on what is missed when surveillance runs in English only.
+      Patients report side effects in whatever language they speak, but almost all detection systems are trained and tested in English. I build corpora and models for German, French, and Japanese, and try to figure out what gets missed when surveillance only runs in one language.
     </p>
   </article>
 
   <article>
-    <h3>Synthetic and shareable clinical corpora</h3>
+    <h3>Synthetic and Shareable Clinical Corpora</h3>
     <p>
-      Much clinical NLP is unreproducible because the data cannot be shared. I contribute to open synthetic benchmarks and shared tasks so that methods can be compared without moving real patient data.
+      A lot of clinical NLP results can't be reproduced simply because the data behind them can never shared beyond the hospital. I work on synthetic benchmarks and shared tasks that let people compare methods against each other without ever moving a real patient record.
     </p>
   </article>
 </div>
@@ -67,7 +67,7 @@ author_profile: true
   Most recent list on <a href="https://scholar.google.com/citations?user=S0TC4zMAAAAJ&hl=en">Google Scholar</a>.
 </p>
 
-{% assign entries = site.data.publications.entries %}
+{% assign entries = site.data.publications.entries | where_exp: "e", "e.kind != 'preprint'" %}
 {% assign highlight = site.data.publications.highlight %}
 {% assign year_groups = entries | group_by: "year" | sort: "name" | reverse %}
 {% for grp in year_groups %}
@@ -77,7 +77,7 @@ author_profile: true
   {% for p in grp.items %}
   <div class="pub">
     <span class="pub-title">{{ p.title }}{% if p.kind %}<span class="kind">{{ p.kind }}</span>{% endif %}</span>
-    <span class="pub-authors">{% for a in p.authors %}{% if a == highlight %}<span class="me">{{ a }}</span>{% else %}{{ a }}{% endif %}{% unless forloop.last %}{% if forloop.rindex == 2 %} and {% else %}, {% endif %}{% endunless %}{% endfor %}</span>
+    <span class="pub-authors">{% for a in p.authors %}{% if a == highlight %}<span class="me">{{ a }}</span>{% else %}{{ a }}{% endif %}{% if p.equal_contrib_count and forloop.index <= p.equal_contrib_count %}<sup>*</sup>{% endif %}{% unless forloop.last %}{% if forloop.rindex == 2 %} and {% else %}, {% endif %}{% endunless %}{% endfor %}</span>
     <span class="pub-venue"><em>{{ p.venue }}</em></span>
     {% if p.links.size > 0 %}<span class="pub-links">{% for l in p.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</span>{% endif %}
   </div>
@@ -86,11 +86,13 @@ author_profile: true
 </details>
 {% endfor %}
 
+<p class="note">* Equal contribution.</p>
+
 </section>
 
 <section id="teaching" markdown="1">
 
-## <span class="tag">03</span> Teaching &amp; service
+## <span class="tag">03</span> Teaching &amp; Service
 
 ### Supervision
 
@@ -119,11 +121,37 @@ ACL, EMNLP, NAACL, EACL, LREC, COLING, BioNLP, ClinicalNLP, Nature Communication
 
 </section>
 
+<section id="freelancing" markdown="1">
+
+## <span class="tag">04</span> Freelancing
+{: #freelancing-title}
+
+Alongside my research, I sometimes take on freelance and advisory work at
+the intersection of NLP and healthcare (and sometimes other topics such as
+deepfake detection). Bridging the gap between academia and industry is
+exciting, and often provides a different perspective on problems we try to
+solve with AI.
+
+<ul class="plain">
+  <li>
+    <span class="tag">Advisory</span>
+    Scientific advisory for health-tech and NLP products, e.g. ongoing work with <a href="https://gretchen-ai.com/de/">Gretchen AI</a>.
+  </li>
+  <li>
+    <span class="tag">Talks</span>
+    Invited talks and workshops on clinical NLP, multilingual pharmacovigilance, and de-identification.
+  </li>
+</ul>
+
+
+</section>
+
 <section id="contact" markdown="1">
 
-## <span class="tag">04</span> Contact
+## <span class="tag">05</span> Contact
 {: #contact-title}
 
-<p><span class="tag">Email</span> last name @ tu-berlin.de</p>
+Interested in working together? Get in touch via last name @ tu-berlin.de.
+
 
 </section>
