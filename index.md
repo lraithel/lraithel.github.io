@@ -23,7 +23,7 @@ author_profile: true
 
 <section id="research" markdown="1">
 
-## <span class="section-num">01</span> Research
+## Research
 {: #research-title}
 
 <div class="themes">
