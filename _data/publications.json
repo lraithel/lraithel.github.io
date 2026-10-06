@@ -51,6 +51,14 @@
       "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/2026.smm4h-1.53/" }]
     },
     {
+      "title": "Real-world deployment and longitudinal evaluation of a human-in-the-loop telemedicine communication support system",
+      "authors": ["Roland Roller", "A. Ravichandran", "Tillmann Breitenstein", "M. Naik", "B. Zukunft", "B. Osmanodja", "Matthias Pfefferkorn", "and others"],
+      "venue": "Frontiers in Digital Health 2026",
+      "year": 2026,
+      "kind": "journal",
+      "links": [{ "label": "DOI", "url": "https://doi.org/10.3389/fdgth.2026.1864704" }]
+    },
+    {
       "title": "Cross- and multi-lingual medication detection: a transformer-based analysis",
       "authors": ["Lisa Raithel", "Johann Frei", "Philippe Thomas", "Roland Roller", "Pierre Zweigenbaum", "Sebastian Möller", "Frank Kramer"],
       "venue": "BMC Medical Informatics and Decision Making 25(1):359",
@@ -100,6 +108,14 @@
       "links": [{ "label": "PDF", "url": "https://ceur-ws.org/Vol-4038/paper_123.pdf" }]
     },
     {
+      "title": "Long-Term Development of Attitudes towards Schizophrenia and Depression in Scientific Abstracts",
+      "authors": ["Ivan Nenchev", "Tatjana Scheffler", "Lisa Raithel", "Elif Kara", "Benjamin Wilck", "Maren Rabe", "Philip Stötzner", "C. Montag"],
+      "venue": "NLP4PI 2025",
+      "year": 2025,
+      "kind": "workshop",
+      "links": [{ "label": "ACL Anthology", "url": "https://doi.org/10.18653/v1/2025.nlp4pi-1.9" }]
+    },
+    {
       "title": "Cross-lingual Information Extraction for the Assessment and Prevention of Adverse Drug Reactions",
       "authors": ["Lisa Raithel"],
       "venue": "PhD thesis, Université Paris-Saclay and TU Berlin",
@@ -139,6 +155,30 @@
       "year": 2024,
       "kind": "shared task",
       "links": [{ "label": "DOI", "url": "https://doi.org/10.18653/v1/2024.semeval-1.99" }]
+    },
+    {
+      "title": "Overview of the 9th Social Media Mining for Health Applications (#SMM4H) Shared Tasks at ACL 2024 – Large Language Models and Generalizability for Social Media NLP",
+      "authors": ["Dongfang Xu", "Guillermo Lopez-Garcia", "Lisa Raithel", "Philippe Thomas", "Roland Roller", "Eiji Aramaki", "Shoko Wakamiya", "and others"],
+      "venue": "SMM4H 2024",
+      "year": 2024,
+      "kind": "shared task",
+      "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/2024.smm4h-1.40/" }]
+    },
+    {
+      "title": "Overview of #SMM4H 2024 – Task 2: Cross-Lingual Few-Shot Relation Extraction for Pharmacovigilance in French, German, and Japanese",
+      "authors": ["Lisa Raithel", "Philippe Thomas", "Bhuvanesh Verma", "Roland Roller", "Hui-Syuan Yeh", "Shuntaro Yada", "Cyril Grouin", "and others"],
+      "venue": "SMM4H 2024",
+      "year": 2024,
+      "kind": "shared task",
+      "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/2024.smm4h-1.39/" }]
+    },
+    {
+      "title": "Assessing Authenticity and Anonymity of Synthetic User-generated Content in the Medical Domain",
+      "authors": ["Tomohiro Nishiyama", "Lisa Raithel", "Roland Roller", "Pierre Zweigenbaum", "Eiji Aramaki"],
+      "venue": "CALD-pseudo 2024",
+      "year": 2024,
+      "kind": "conference",
+      "links": [{ "label": "ACL Anthology", "url": "https://aclanthology.org/2024.caldpseudo-1.2/" }]
     },
     {
       "title": "NTCIR-17 MedNLP-SC Social Media Adverse Drug Event Detection: Subtask Overview",
