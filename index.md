@@ -30,14 +30,14 @@ author_profile: true
   <article>
     <h3>Evaluation for clinical AI</h3>
     <p>
-      A model that is fluent on a benchmark can still be unsafe at the bedside. I am interested in counterfactual and adversarial evaluation designs that separate detecting a problem from localising it and from explaining it.
+      I am interested in counterfactual and adversarial evaluation designs that separate detecting a problem from localising it and from explaining it, to build models that are not only good on a benchmark but also in the hospital.
     </p>
   </article>
 
   <article>
     <h3>De-identification and re-identification risk</h3>
     <p>
-      Removing names and dates is not the same as making a document safe. I study indirect identifiers, the quasi-identifying detail that survives standard de-identification according to HIPAA, and how to measure the residual risk of a released corpus in a way that maps onto data protection law rather than onto token-level F1.
+      Removing names and dates is not the same as making a document safe. I study indirect identifiers, the quasi-identifying detail that is still left after standard de-identification according to HIPAA, and how to measure the residual risk of a released corpus in a way that maps onto data protection law rather than onto token-level F1.
     </p>
   </article>
 
