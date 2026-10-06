@@ -23,7 +23,7 @@ author_profile: true
 
 <section id="research" markdown="1">
 
-## <span class="tag">01</span> Research
+## <span class="section-num">01</span> Research
 {: #research-title}
 
 <div class="themes">
@@ -60,7 +60,7 @@ author_profile: true
 
 <section id="publications" markdown="1">
 
-## <span class="tag">02</span> Publications
+## <span class="section-num">02</span> Publications
 {: #publications-title}
 
 <p class="note">
@@ -92,7 +92,7 @@ author_profile: true
 
 <section id="teaching" markdown="1">
 
-## <span class="tag">03</span> Teaching &amp; service
+## <span class="section-num">03</span> Teaching &amp; service
 
 ### Supervision
 
@@ -123,7 +123,7 @@ ACL, EMNLP, NAACL, EACL, LREC, COLING, BioNLP, ClinicalNLP, Nature Communication
 
 <section id="freelancing" markdown="1">
 
-## <span class="tag">04</span> Freelancing
+## <span class="section-num">04</span> Freelancing
 {: #freelancing-title}
 
 Alongside my research, I sometimes take on freelance and advisory work at
@@ -149,7 +149,7 @@ Interested in working together? Get in touch via the <a href="#contact">contact 
 
 <section id="contact" markdown="1">
 
-## <span class="tag">05</span> Contact
+## <span class="section-num">05</span> Contact
 {: #contact-title}
 
 <p><span class="tag">Email</span> last name @ tu-berlin.de</p>
