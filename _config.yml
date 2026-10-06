@@ -3,7 +3,7 @@ locale                : "en-US"
 title                 : "Lisa Raithel"
 title_separator       : "-"
 name                  : "Lisa Raithel"
-# masthead_title        : "Lisa Raithel"
+masthead_title        : " " # commenting this out doesn't hide it - it falls back to `title` above. A literal space is the theme's documented way to show no masthead title.
 description           : "Lisa Raithel, postdoctoral researcher in clinical and biomedical natural language processing at TU Berlin, BIFOLD and DFKI."
 url                   : "https://lraithel.github.io"
 repository             : "lraithel/lraithel.github.io"

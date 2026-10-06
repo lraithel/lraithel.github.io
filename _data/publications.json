@@ -3,6 +3,14 @@
   "highlight": "Lisa Raithel",
   "entries": [
     {
+      "title": "HeMAI 2026: Multimodal Interaction with Generative AI Health Applications",
+      "authors": ["Lisa Raithel", "Stefan Hillmann", "Roland Roller", "Sebastian Möller", "Catherine Pelachaud"],
+      "venue": "HeMAI @ ICMI 2026, pp. 1495-1497",
+      "year": 2026,
+      "kind": "workshop",
+      "links": [{ "label": "ACM DL", "url": "https://doi.org/10.1145/3776574.3836739" }]
+    },
+    {
       "title": "MultiGraSCCo: A Multilingual Anonymization Benchmark with Annotations of Personal Identifiers",
       "authors": ["Ibrahim Baroud", "Christoph Otto", "Vera Czehmann", "Christine Hovhannisyan", "Lisa Raithel", "Sebastian Möller", "Roland Roller"],
       "venue": "LREC 2026",
