@@ -87,6 +87,7 @@ h1 .ent { margin-inline: 0.05em; }
     h3 {
       margin: 0 0 0.4rem;
       font-size: 1.05rem;
+      color: $primary-color;
     }
 
     p {
@@ -288,6 +289,7 @@ details[open] > .pub-year::before { content: "\2212"; } // minus sign
   .themes article {
     background: #211519;
   }
+  .themes article h3 { color: #e893b3; }
 
   .pub-year-group { border-bottom-color: #3a2530; }
   .pub-year { color: #e893b3; }
