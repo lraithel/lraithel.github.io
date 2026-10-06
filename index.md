@@ -4,7 +4,7 @@ author_profile: true
 ---
 
 <section class="hero">
-  <h1 class="hero-tagline">Postdoctoral researcher at QU Lab, TU Berlin &amp; BIFOLD</h1>
+  <h1 class="hero-tagline">Hi, I'm Lisa!</h1>
   <p class="hero-lede">
     I am a postdoc at the <a href="https://www.tu.berlin/qu">Quality and Usability Lab</a>,
     TU Berlin, affiliated with <a href="https://www.bifold.berlin/">BIFOLD</a> and the
@@ -28,30 +28,30 @@ author_profile: true
 
 <div class="themes">
   <article>
-    <h3>Evaluation for clinical AI</h3>
+    <h3>Evaluation for Clinical AI</h3>
     <p>
-      Getting the right label on a benchmark is not the same as being safe to use on a real patient. I work on counterfactual and adversarial evaluation designs to check whether a model actually catches a problem, can point to where it is, and can explain why - three different questions that a single accuracy number tends to hide.
+      I am interested in counterfactual and adversarial evaluation designs that separate detecting a problem from localising it and from explaining it, to build models that are not only good on a benchmark but also in the hospital.
     </p>
   </article>
 
   <article>
-    <h3>De-identification and re-identification risk</h3>
+    <h3>De-identification and Re-identification Risk</h3>
     <p>
-      I look at indirect identifiers - the details left in a document after names and dates are removed that can still narrow a patient down, like a rare diagnosis or an unusual age and location combination. Under HIPAA that risk is supposed to be measured, not assumed, and I work on ways to actually quantify how much of it survives standard de-identification.
+      I look at indirect identifiers -- the details left in a document after names and dates are removed that can still narrow a patient down, like a rare diagnosis or an unusual age and location combination, working on ways to actually quantify how much of it survives standard de-identification.
     </p>
   </article>
 
   <article>
-    <h3>Multilingual pharmacovigilance</h3>
+    <h3>Multilingual Pharmacovigilance</h3>
     <p>
       Patients report side effects in whatever language they speak, but almost all detection systems are trained and tested in English. I build corpora and models for German, French, and Japanese, and try to figure out what gets missed when surveillance only runs in one language.
     </p>
   </article>
 
   <article>
-    <h3>Synthetic and shareable clinical corpora</h3>
+    <h3>Synthetic and Shareable Clinical Corpora</h3>
     <p>
-      A lot of clinical NLP results can't be reproduced simply because the data behind them can never leave the hospital. I work on synthetic benchmarks and shared tasks that let people compare methods against each other without ever moving a real patient record.
+      A lot of clinical NLP results can't be reproduced simply because the data behind them can never be shared beyond the hospital. I work on synthetic benchmarks and shared tasks that let people compare methods against each other without ever moving a real patient record.
     </p>
   </article>
 </div>
@@ -92,7 +92,7 @@ author_profile: true
 
 <section id="teaching" markdown="1">
 
-## <span class="section-num">03</span> Teaching &amp; service
+## <span class="section-num">03</span> Teaching &amp; Service
 
 ### Supervision
 
@@ -143,7 +143,6 @@ solve with AI.
   </li>
 </ul>
 
-Interested in working together? Get in touch via the <a href="#contact">contact section below</a>.
 
 </section>
 
@@ -152,6 +151,7 @@ Interested in working together? Get in touch via the <a href="#contact">contact 
 ## <span class="section-num">05</span> Contact
 {: #contact-title}
 
-<p><span class="tag">Email</span> last name @ tu-berlin.de</p>
+Interested in working together? Get in touch via last name @ tu-berlin.de.
+
 
 </section>
