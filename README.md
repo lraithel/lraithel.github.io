@@ -14,7 +14,6 @@ _sass/custom-site.scss      hero entity spans, research grid, publication list s
 assets/css/main.scss        wires the two files above into the theme's build
 tools/update_publications.py  merges new/updated publications from Semantic Scholar (runs weekly, see below)
 tools/dblp_to_json.py       manual, full-regenerate DBLP import - not part of the automated pipeline
-cv.pdf                      add your own
 ```
 
 ## Preview locally
@@ -30,6 +29,13 @@ bundle exec jekyll serve
 
 
 ## Update the publication list
+
+This repo's **Settings → Actions → General → Workflow permissions** must have
+"Allow GitHub Actions to create and approve pull requests" checked, or the
+workflow below will keep committing to a new `auto/publications-*` branch
+every week and then silently fail at the PR-creation step - which is exactly
+what happened here for months before anyone noticed. If papers stop showing
+up as PRs, check that setting first.
 
 A scheduled GitHub Action (`.github/workflows/update-publications.yml`)
 runs every Monday, and can be run on demand from the Actions tab
