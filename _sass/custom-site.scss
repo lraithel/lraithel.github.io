@@ -220,6 +220,19 @@ details[open] > .pub-year::before { content: "\2212"; } // minus sign
   margin-right: 0.5em;
 }
 
+.section-num {
+  // The "01 Research" etc. prefixes used to share .tag's small inline-label
+  // size, which is why making them bigger also blew up the year/category
+  // tags. em-sized off the parent h2 so it scales with it responsively.
+  display: inline-block;
+  font-family: $monospace;
+  font-size: 0.75em;
+  letter-spacing: 0.02em;
+  color: $primary-color;
+  margin-right: 0.15em;
+  vertical-align: baseline;
+}
+
 /* ---------- dark mode ----------
    Placed here (imported after the theme's own component partials) rather
    than in the skin file, so these rules win the cascade tie against the
@@ -284,7 +297,7 @@ details[open] > .pub-year::before { content: "\2212"; } // minus sign
   .pub-authors, .pub-venue, .hero-lede, .themes article p { color: #b9a6ad; }
   .hero-tagline { color: #e893b3; }
   .pub-authors .me { color: #ede3e7; }
-  .kind, .tag { color: #e893b3; border-color: #4a3038; }
+  .kind, .tag, .section-num { color: #e893b3; border-color: #4a3038; }
 
   .ent-a { background: mix(#000, $ent-source, 70%); color: #f3c7d8; }
   .ent-b { background: mix(#000, $ent-method, 70%); color: #d9c9f2; }

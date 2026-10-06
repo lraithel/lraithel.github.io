@@ -23,7 +23,7 @@ author_profile: true
 
 <section id="research" markdown="1">
 
-## <span class="tag">01</span> Research
+## <span class="section-num">01</span> Research
 {: #research-title}
 
 <div class="themes">
@@ -51,7 +51,7 @@ author_profile: true
   <article>
     <h3>Synthetic and Shareable Clinical Corpora</h3>
     <p>
-      A lot of clinical NLP results can't be reproduced simply because the data behind them can never shared beyond the hospital. I work on synthetic benchmarks and shared tasks that let people compare methods against each other without ever moving a real patient record.
+      A lot of clinical NLP results can't be reproduced simply because the data behind them can never be shared beyond the hospital. I work on synthetic benchmarks and shared tasks that let people compare methods against each other without ever moving a real patient record.
     </p>
   </article>
 </div>
@@ -60,7 +60,7 @@ author_profile: true
 
 <section id="publications" markdown="1">
 
-## <span class="tag">02</span> Publications
+## <span class="section-num">02</span> Publications
 {: #publications-title}
 
 <p class="note">
@@ -92,7 +92,7 @@ author_profile: true
 
 <section id="teaching" markdown="1">
 
-## <span class="tag">03</span> Teaching &amp; Service
+## <span class="section-num">03</span> Teaching &amp; Service
 
 ### Supervision
 
@@ -123,7 +123,7 @@ ACL, EMNLP, NAACL, EACL, LREC, COLING, BioNLP, ClinicalNLP, Nature Communication
 
 <section id="freelancing" markdown="1">
 
-## <span class="tag">04</span> Freelancing
+## <span class="section-num">04</span> Freelancing
 {: #freelancing-title}
 
 Alongside my research, I sometimes take on freelance and advisory work at
@@ -148,7 +148,7 @@ solve with AI.
 
 <section id="contact" markdown="1">
 
-## <span class="tag">05</span> Contact
+## <span class="section-num">05</span> Contact
 {: #contact-title}
 
 Interested in working together? Get in touch via last name @ tu-berlin.de.
