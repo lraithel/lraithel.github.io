@@ -1,0 +1,67 @@
+# GENERATED from data/talks.yml in lraithel/CV_long by tools/build_data.py. Do not edit by hand.
+- date: 2026-11
+  label: Nov 2026
+  year: 2026
+  type: invited
+  prefix: Talk
+  title: NLP before LLMs
+  detail: for clinicians and data scientists
+  event: Charité IKIM
+  location: Berlin
+- date: 2026-10
+  label: Oct 2026
+  year: 2026
+  type: poster
+  prefix: Poster on the VESTIGE benchmark
+  event: Building Commons for Clinical LLMs
+  location: Paris, France
+  note: (non-archival)
+- date: 2026-09
+  label: Sep 2026
+  year: 2026
+  type: hands-on
+  prefix: Hands-on session
+  title: 'Anonymize, Then Break It: Re-identification Risk in Clinical NLP'
+  event: Berlin Summer School on AI and Society
+- date: 2026-09
+  label: Sep 2026
+  year: 2026
+  type: hands-on
+  prefix: Interactive session
+  title: How Do You Know It Worked? Privacy and Evaluation in Multilingual Clinical
+    NLP
+  event: WisPerMed Summer School
+  location: Leuven, Belgium
+- date: 2026-07
+  label: Jul 2026
+  year: 2026
+  type: talk
+  prefix: Talk on a rule-based telemedicine chat system for kidney transplant patients
+  event: SmartNTx closing symposium
+  location: Erlangen
+- date: 2026-06
+  label: Jun 2026
+  year: 2026
+  type: keynote
+  prefix: Keynote
+  title: NLP across the Healthcare Spectrum
+  event: Dagstuhl seminar of DFG Research Training Groups
+  location: Germany
+- date: 2025-10
+  label: Oct 2025
+  year: 2025
+  type: invited
+  event: The Hong Kong Polytechnic University, LST Research Seminar
+  location: Hong Kong
+- date: 2025-10
+  label: Oct 2025
+  year: 2025
+  type: invited
+  event: NAIST, Social Computing Laboratory
+  location: Japan
+- date: 2025-04
+  label: Apr 2025
+  year: 2025
+  type: invited
+  event: Universität Augsburg, Medical Informatics Group
+  location: Germany

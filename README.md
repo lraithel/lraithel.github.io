@@ -6,14 +6,13 @@ publishes it automatically on every push to the default branch.
 
 ```
 _config.yml                 site settings, author bio, nav
-index.md                    the whole page: hero, research, publications, teaching, contact
+index.md                    the whole page: hero, research, publications, talks, teaching, contact
 _data/navigation.yml        top nav links
-_data/publications.json     the publication list (edit this)
+_data/publications.json     the publication list (GENERATED, do not edit)
+_data/talks.yml             the talk list (GENERATED, do not edit)
 _sass/minimal-mistakes/skins/_custom.scss   the burgundy color palette
 _sass/custom-site.scss      hero entity spans, research grid, publication list styling, dark mode
 assets/css/main.scss        wires the two files above into the theme's build
-tools/update_publications.py  merges new/updated publications from Semantic Scholar (runs weekly, see below)
-tools/dblp_to_json.py       manual, full-regenerate DBLP import - not part of the automated pipeline
 ```
 
 ## Preview locally
@@ -28,42 +27,16 @@ bundle exec jekyll serve
 ```
 
 
-## Update the publication list
+## Update publications and talks
 
-This repo's **Settings → Actions → General → Workflow permissions** must have
-"Allow GitHub Actions to create and approve pull requests" checked, or the
-workflow below will keep committing to a new `auto/publications-*` branch
-every week and then silently fail at the PR-creation step - which is exactly
-what happened here for months before anyone noticed. If papers stop showing
-up as PRs, check that setting first.
-
-A scheduled GitHub Action (`.github/workflows/update-publications.yml`)
-runs every Monday, and can be run on demand from the Actions tab
-("Update publications" → "Run workflow") - to fetch from
-[Semantic Scholar](https://www.semanticscholar.org/), merge in anything new,
-and open a PR if there's a diff. It only adds new entries or fills in a
-real venue for an entry that's currently listed as a bare arXiv preprint;
-it never deletes anything, so entries Semantic Scholar doesn't index (the
-PhD thesis, Zenodo datasets, CEUR workshop notes) are left alone. Review
-the PR like any other before merging.
-
-Semantic Scholar's unauthenticated tier shares its rate limit across every
-unauthenticated caller on the same IP range, which in practice includes
-every other GitHub Actions job in the world running at that moment - the
-scheduled run failed with a 429 every week for the first month. Get a free
-key at https://www.semanticscholar.org/product/api#api-key-form and add it
-as a repository secret named `S2_API_KEY` (Settings → Secrets and
-variables → Actions → New repository secret) to run against a dedicated
-quota instead. Without a key it still works, just less reliably.
-
-To run:
+`_data/publications.json` and `_data/talks.yml` are generated from the private
+repo `lraithel/CV_long` (`data/publications.bib` and `data/talks.yml`), which
+also feeds the CVs. Do not edit them here: change the data there and run
 
 ```bash
-python3 tools/update_publications.py --dry-run   # preview, writes nothing
-python3 tools/update_publications.py             # writes _data/publications.json
+python3 tools/build_data.py --website ../lraithel.github.io
 ```
 
-`_data/publications.json` can also just be edited by hand at any time.
-Jekyll picks up `_data/*.json` automatically.
-
-
+in the CV repo, then commit the two files in `_data/` here. A monthly scheduled
+task does this automatically and opens a PR on both repos when something changed.
+The previous weekly Semantic Scholar workflow is retired.
