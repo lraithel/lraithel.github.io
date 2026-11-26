@@ -25,13 +25,12 @@
    "title": "Real-world deployment and longitudinal evaluation of a human-in-the-loop telemedicine communication support system",
    "authors": [
     "Roland Roller",
-    "A. Ravichandran",
-    "Tillmann Breitenstein",
-    "M. Naik",
-    "B. Zukunft",
-    "B. Osmanodja",
-    "Matthias Pfefferkorn",
-    "and others"
+    "Ajay Madhavan Ravichandran",
+    "Tillmann-Leonhard Breitenstein",
+    "…",
+    "Lisa Raithel",
+    "…",
+    "Wiebke Duettmann"
    ],
    "venue": "Frontiers in Digital Health 2026",
    "year": 2026,
@@ -169,24 +168,6 @@
    ]
   },
   {
-   "title": "MIMIC-III-IPI: Discharge Summaries from MIMIC-III with Indirect Personal Identifier Annotations",
-   "authors": [
-    "Ibrahim Baroud",
-    "Lisa Raithel",
-    "Sebastian Möller",
-    "Roland Roller"
-   ],
-   "venue": "Zenodo",
-   "year": 2025,
-   "kind": "dataset",
-   "links": [
-    {
-     "label": "DOI",
-     "url": "https://doi.org/10.5281/zenodo.15372705"
-    }
-   ]
-  },
-  {
    "title": "Cross- & multi-lingual medication detection: a transformer-based analysis",
    "authors": [
     "Lisa Raithel",
@@ -315,6 +296,34 @@
     {
      "label": "DOI",
      "url": "https://doi.org/10.20736/0002002051"
+    }
+   ]
+  },
+  {
+   "title": "KEEPHA corpus",
+   "authors": [
+    "Lisa Raithel",
+    "Hui-Syuan Yeh",
+    "Shuntaro Yada",
+    "Cyril Grouin",
+    "Thomas Lavergne",
+    "Aurélie Névéol",
+    "Patrick Paroubek",
+    "Philippe Thomas",
+    "Tomohiro Nishiyama",
+    "Sebastian Möller",
+    "Eiji Aramaki",
+    "Yuji Matsumoto",
+    "Roland Roller",
+    "Pierre Zweigenbaum"
+   ],
+   "venue": "Zenodo, restricted access (data usage agreement)",
+   "year": 2024,
+   "kind": "dataset",
+   "links": [
+    {
+     "label": "DOI",
+     "url": "https://doi.org/10.5281/zenodo.23948821"
     }
    ]
   },
