@@ -300,6 +300,34 @@
    ]
   },
   {
+   "title": "KEEPHA corpus",
+   "authors": [
+    "Lisa Raithel",
+    "Hui-Syuan Yeh",
+    "Shuntaro Yada",
+    "Cyril Grouin",
+    "Thomas Lavergne",
+    "Aurélie Névéol",
+    "Patrick Paroubek",
+    "Philippe Thomas",
+    "Tomohiro Nishiyama",
+    "Sebastian Möller",
+    "Eiji Aramaki",
+    "Yuji Matsumoto",
+    "Roland Roller",
+    "Pierre Zweigenbaum"
+   ],
+   "venue": "Zenodo, restricted access (data usage agreement)",
+   "year": 2024,
+   "kind": "dataset",
+   "links": [
+    {
+     "label": "DOI",
+     "url": "https://doi.org/10.5281/zenodo.23948821"
+    }
+   ]
+  },
+  {
    "title": "A Dataset for Pharmacovigilance in German, French, and Japanese: Annotating Adverse Drug Reactions across Languages",
    "authors": [
     "Lisa Raithel",
