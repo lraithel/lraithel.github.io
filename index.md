@@ -66,7 +66,7 @@ author_profile: true
   Most recent list on <a href="https://scholar.google.com/citations?user=S0TC4zMAAAAJ&hl=en">Google Scholar</a>.
 </p>
 
-{% assign entries = site.data.publications.entries | where_exp: "e", "e.kind != 'preprint'" %}
+{% assign entries = site.data.publications.entries | where_exp: "e", "e.kind != 'preprint'" | where_exp: "e", "e.kind != 'dataset'" %}
 {% assign highlight = site.data.publications.highlight %}
 {% assign year_groups = entries | group_by: "year" | sort: "name" | reverse %}
 {% for grp in year_groups %}
@@ -86,6 +86,24 @@ author_profile: true
 {% endfor %}
 
 <p class="note">* Equal contribution.</p>
+
+</section>
+
+<section id="data" markdown="1">
+
+## Data
+{: #data-title}
+
+{% assign datasets = site.data.publications.entries | where: "kind", "dataset" %}
+{% assign highlight = site.data.publications.highlight %}
+{% for p in datasets %}
+<div class="pub">
+  <span class="pub-title">{{ p.title }}</span>
+  <span class="pub-authors">{% for a in p.authors %}{% if a == highlight %}<span class="me">{{ a }}</span>{% else %}{{ a }}{% endif %}{% unless forloop.last %}{% if forloop.rindex == 2 %} and {% else %}, {% endif %}{% endunless %}{% endfor %}</span>
+  <span class="pub-venue"><em>{{ p.venue }}</em>, {{ p.year }}</span>
+  {% if p.links.size > 0 %}<span class="pub-links">{% for l in p.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</span>{% endif %}
+</div>
+{% endfor %}
 
 </section>
 
