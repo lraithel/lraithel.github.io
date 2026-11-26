@@ -1,15 +1,14 @@
 /* ==========================================================================
    Site-specific components - hero entity spans, research grid, publication
-   list. Layered on top of the burgundy skin; $primary-color etc. are already
+   list. Layered on top of the aubergine/copper skin; $primary-color etc. are already
    in scope here since this partial is imported after the skin and the
    theme's own variables.
    ========================================================================== */
 
-// A light, a mid, and a dark step off the burgundy accent, used to keep the
-// three hero entity types visually distinct without leaving the palette.
-$ent-source: $primary-color;      // burgundy
-$ent-method: #5b3a8e;             // violet
-$ent-eval:   #b34d6e;             // dusty rose
+// The three hero entity types use the CV palette: aubergine, copper, warm grey.
+$ent-source: $primary-color;      // aubergine
+$ent-method: $accent2-color;      // copper
+$ent-eval:   $date-color;         // warm grey
 
 .hero {
   margin-bottom: 1.5rem;
@@ -134,7 +133,7 @@ h1 .ent { margin-inline: 0.05em; }
 
 .pub-year {
   // <summary> comes with its own disclosure triangle in most browsers;
-  // replace it with a +/- so it reads clearly against the burgundy color
+  // replace it with a +/- so it reads clearly against the accent color
   list-style: none;
   cursor: pointer;
   display: flex;
@@ -143,7 +142,7 @@ h1 .ent { margin-inline: 0.05em; }
   font-family: $monospace;
   font-size: 0.95rem;
   letter-spacing: 0.08em;
-  color: $primary-color;
+  color: $accent2-color;
   padding: 0.9rem 0;
   -webkit-tap-highlight-color: transparent;
 
@@ -155,7 +154,7 @@ h1 .ent { margin-inline: 0.05em; }
     width: 1em;
   }
 
-  &:hover { color: $link-color-hover; }
+  &:hover { color: mix(#000, $accent2-color, 15%); }
 }
 
 details[open] > .pub-year::before { content: "\2212"; } // minus sign
@@ -238,7 +237,7 @@ details[open] > .pub-year::before { content: "\2212"; } // minus sign
   display: inline-block;
   font-family: $monospace;
   font-size: 0.85rem;
-  color: $primary-color;
+  color: $date-color;
   margin-right: 0.5em;
 }
 
@@ -261,68 +260,69 @@ details[open] > .pub-year::before { content: "\2212"; } // minus sign
    theme's unconditional, compile-time background colors. */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #1b1216;
-    color: #ede3e7;
+    background-color: #18141a;
+    color: #ece6ec;
   }
 
-  a { color: #e893b3; }
-  a:hover { color: #f3b2cb; }
+  a { color: #d4b3d6; }
+  a:hover { color: #e8d3e9; }
 
-  .masthead { border-bottom-color: #3a2530; }
+  .masthead { border-bottom-color: #3a3040; }
 
   // the theme bakes a light $background-color into .greedy-nav and its
   // mobile dropdown at compile time; override both explicitly
   .greedy-nav {
-    background: #1b1216;
+    background: #18141a;
   }
   .greedy-nav .hidden-links {
-    background: #241820;
-    border-color: #3a2530;
+    background: #221c24;
+    border-color: #3a3040;
     box-shadow: 0 2px 4px 0 rgba(#000, 0.4);
   }
   .greedy-nav a,
   .site-title,
   .site-subtitle {
-    color: #ede3e7;
+    color: #ece6ec;
   }
   .greedy-nav .visible-links a:before {
-    background: #e893b3;
+    background: #d4b3d6;
   }
   .greedy-nav__toggle {
-    color: #ede3e7;
+    color: #ece6ec;
   }
 
   .page__footer {
-    background-color: #150e11;
-    color: #b9a6ad;
+    background-color: #131016;
+    color: #b8aeb9;
   }
-  .page__footer a { color: #e893b3; }
-  .page__footer-copyright { color: #8a7a80; }
+  .page__footer a { color: #d4b3d6; }
+  .page__footer-copyright { color: #8d8790; }
 
-  .author__avatar img { border-color: #3a2530; }
+  .author__avatar img { border-color: #3a3040; }
   .btn--inverse,
   .author__urls-wrapper button.btn--inverse {
     background-color: transparent;
-    color: #ede3e7;
-    border-color: #3a2530;
+    color: #ece6ec;
+    border-color: #3a3040;
   }
 
   .themes article {
-    background: #211519;
+    background: #1f1a21;
   }
-  .themes article h3 { color: #e893b3; }
+  .themes article h3 { color: #d4b3d6; }
 
-  .pub-year-group { border-bottom-color: #3a2530; }
-  .pub-year { color: #e893b3; }
-  .pub-year:hover { color: #f3b2cb; }
-  .pub-count { color: #b9a6ad; }
-  .pub-title { color: #ede3e7; }
-  .pub-authors, .pub-venue, .hero-lede, .themes article p { color: #b9a6ad; }
-  .hero-tagline { color: #e893b3; }
-  .pub-authors .me { color: #ede3e7; }
-  .kind, .tag, .section-num { color: #e893b3; border-color: #4a3038; }
+  .pub-year-group { border-bottom-color: #3a3040; }
+  .pub-year { color: #e3a56e; }   // copper, lightened for dark mode
+  .pub-year:hover { color: #f0c49c; }
+  .pub-count { color: #b8aeb9; }
+  .pub-title { color: #ece6ec; }
+  .pub-authors, .pub-venue, .hero-lede, .themes article p { color: #b8aeb9; }
+  .hero-tagline { color: #d4b3d6; }
+  .pub-authors .me { color: #ece6ec; }
+  .kind, .section-num { color: #d4b3d6; border-color: #4a3e4c; }
+  .tag { color: #b8aeb9; }
 
-  .ent-a { background: mix(#000, $ent-source, 70%); color: #f3c7d8; }
-  .ent-b { background: mix(#000, $ent-method, 70%); color: #d9c9f2; }
-  .ent-c { background: mix(#000, $ent-eval, 70%); color: #f5cdd9; }
+  .ent-a { background: mix(#000, $ent-source, 70%); color: #e3cfe4; }
+  .ent-b { background: mix(#000, $ent-method, 70%); color: #f2d3b8; }
+  .ent-c { background: mix(#000, $ent-eval, 70%); color: #ddd7de; }
 }

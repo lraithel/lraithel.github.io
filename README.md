@@ -10,7 +10,7 @@ index.md                    the whole page: hero, research, publications, talks,
 _data/navigation.yml        top nav links
 _data/publications.json     the publication list (GENERATED, do not edit)
 _data/talks.yml             the talk list (GENERATED, do not edit)
-_sass/minimal-mistakes/skins/_custom.scss   the burgundy color palette
+_sass/minimal-mistakes/skins/_custom.scss   the aubergine and copper color palette (same as the CVs)
 _sass/custom-site.scss      hero entity spans, research grid, publication list styling, dark mode
 assets/css/main.scss        wires the two files above into the theme's build
 ```
