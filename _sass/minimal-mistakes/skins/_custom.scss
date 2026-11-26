@@ -1,12 +1,17 @@
 /* ==========================================================================
-   Custom skin - burgundy
+   Custom skin - aubergine and copper (same palette as the CVs in lraithel/CV_long)
    ========================================================================== */
 
 /* Colors */
-$background-color:           #faf7f8 !default;
-$text-color:                 #241a20 !default;
+$background-color:           #faf8f9 !default;
+$text-color:                 #2a2629 !default;
 $muted-text-color:           mix(#fff, $text-color, 35%) !default;
-$primary-color:               #7a1f44 !default;
+$primary-color:               #5a2d5c !default;   // aubergine, CV section headings
+// Copper, CV subheadings. The CV uses #b5651d; on screen it is darkened
+// slightly so small text keeps a WCAG AA contrast (5.4:1 instead of 4.1:1).
+$accent2-color:               #9a5418 !default;
+// Warm grey for dates, like the CV's date column (darkened for contrast).
+$date-color:                  #6e6670 !default;
 $border-color:                mix(#000, $background-color, 8%) !default;
 $code-background-color:       mix(#000, $background-color, 4%) !default;
 $code-background-color-dark:  mix(#000, $background-color, 10%) !default;
