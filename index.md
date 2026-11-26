@@ -99,7 +99,7 @@ author_profile: true
   <li>
     <span class="tag">{{ t.label }}</span>
     {% if t.prefix %}{{ t.prefix }}{% endif %}{% if t.title %} {% if t.url %}<a href="{{ t.url }}">&ldquo;{{ t.title }}&rdquo;</a>{% else %}&ldquo;{{ t.title }}&rdquo;{% endif %}{% endif %}{% if t.detail %} {{ t.detail }}{% endif %}{% if t.prefix or t.title %}, {% endif %}<em>{{ t.event }}</em>{% if t.note %} {{ t.note }}{% endif %}{% if t.location %}, {{ t.location }}{% endif %}.
-    {% if t.type == "keynote" %}<span class="kind">keynote</span>{% elsif t.type == "invited" %}<span class="kind">invited</span>{% endif %}
+    {% if t.type == "keynote" %}<span class="kind">keynote</span>{% endif %}
   </li>
 {% endfor %}
 </ul>
